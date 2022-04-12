@@ -71,12 +71,18 @@ public class CreateTaskPageObject extends MainPageObject {
                 "can't click on final 'Create' button",
                 5
         );
-
-        Thread.sleep(2000);
-        this.waitForElementPresent(
-                By.xpath(NAME_ON_TOP),
-                "can't find 'Tasks' title on the top of the main page",
-                5
-        );
     }
-}
+    // если надо сделать ассерты, то надо на каждый шаг теста в этом классе создать тестовый метод(как ниже createTaskMethod1) и уже потом в taskTest прокидывать ассерты
+        public Object createTaskMethod1() throws InterruptedException {
+            Thread.sleep(2000);
+            this.waitForElementPresent(
+                    By.xpath(NAME_ON_TOP),
+                    "can't find 'Tasks' title on the top of the main page",
+                    5
+            );
+
+            WebElement element = driver.findElement(By.xpath("//div[text()='Tasks']"));
+            String text = element.getText();
+            return text;
+        }
+    }
