@@ -16,7 +16,5 @@ public class TaskTest extends CoreTestCase{
 
         CreateTaskPageObject CreateTaskPageObject = new CreateTaskPageObject(driver);
         CreateTaskPageObject.createTaskMethod();
-        CreateTaskPageObject.createTaskMethod1();
-        assertEquals("Tasks", CreateTaskPageObject.createTaskMethod1(), "incorrect result");
     }
 }
