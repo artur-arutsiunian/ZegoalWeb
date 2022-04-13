@@ -14,7 +14,7 @@ public class CoreTestCase {
     protected ChromeOptions options;
     @Before
     public void SetUp(){
-       System.setProperty("webdriver.chrome.driver","/Users/arturarutsiunian/Desktop/ZegoalWeb/src/main/resources/chromedriver");
+       System.setProperty("webdriver.chrome.driver","/Users/arturarutsiunian/Documents/ZegoalWeb/src/main/resources/chromedriver");
 
         Map<String, Object> prefs = new HashMap<String, Object>();
         prefs.put("profile.default_content_setting_values.notifications", 2);
