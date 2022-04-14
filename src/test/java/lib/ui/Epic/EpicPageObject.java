@@ -1,6 +1,6 @@
-package PageObjects.Epic;
+package lib.ui.Epic;
 
-import PageObjects.MainPageObject;
+import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

@@ -1,9 +1,8 @@
-package PageObjects.Login;
+package lib.ui.Login;
 
-import PageObjects.MainPageObject;
+import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LoginPageObject extends MainPageObject {
 

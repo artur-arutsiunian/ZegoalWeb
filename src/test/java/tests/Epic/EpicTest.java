@@ -1,8 +1,11 @@
-import PageObjects.Epic.EpicPageObject;
-import PageObjects.Login.LoginPageObject;
+package tests.Epic;
+
+import lib.CoreTestCase;
+import lib.ui.Epic.EpicPageObject;
+import lib.ui.Login.LoginPageObject;
 import org.junit.Test;
 
-public class EpicTest extends CoreTestCase{
+public class EpicTest extends CoreTestCase {
 
     @Test
     public void testCreateEpic() throws InterruptedException{

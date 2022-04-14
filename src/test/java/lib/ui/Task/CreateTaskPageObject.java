@@ -1,9 +1,8 @@
-package PageObjects.Task;
+package lib.ui.Task;
 
-import PageObjects.MainPageObject;
+import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class CreateTaskPageObject extends MainPageObject {
 

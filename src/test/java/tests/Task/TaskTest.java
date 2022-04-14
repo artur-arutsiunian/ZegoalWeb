@@ -1,13 +1,13 @@
-import PageObjects.Login.LoginPageObject;
-import PageObjects.Task.CreateTaskPageObject;
-import org.junit.Assert;
+package tests.Task;
+
+import lib.CoreTestCase;
+import lib.ui.Login.LoginPageObject;
+import lib.ui.Task.CreateTaskPageObject;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TaskTest extends CoreTestCase{
+public class TaskTest extends CoreTestCase {
 
     @Test
     public void testCreateTask() throws InterruptedException {
