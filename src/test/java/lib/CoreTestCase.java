@@ -11,7 +11,6 @@ import java.util.Map;
 
 public class CoreTestCase {
 
-
     protected WebDriver driver;
     protected ChromeOptions options;
     @Before

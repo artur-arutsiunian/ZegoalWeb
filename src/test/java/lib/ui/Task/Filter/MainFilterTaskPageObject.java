@@ -1,10 +1,10 @@
-package lib.ui.Task;
+package lib.ui.Task.Filter;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class FilterTaskPageObject extends MainPageObject {
+public class MainFilterTaskPageObject extends MainPageObject {
 
     private final static String
     CHOOSE_USER_FILTER = "(//span[@class='filter-title_title__2csu7'])[1]",
@@ -12,7 +12,7 @@ public class FilterTaskPageObject extends MainPageObject {
     CHOOSE_NAME_USER = "//div[@class='css-15l7072-option not-selected']",
     ASSIGNEE_PRESENT_ON_THE_PAGE = "(//div[@title='2907'])[1]";
 
-    public FilterTaskPageObject(WebDriver driver)
+    public MainFilterTaskPageObject(WebDriver driver)
     {
         super(driver);
     }

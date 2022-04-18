@@ -2,7 +2,7 @@ package tests.Task;
 
 import lib.CoreTestCase;
 import lib.ui.Login.LoginPageObject;
-import lib.ui.Task.FilterTaskPageObject;
+import lib.ui.Task.Filter.MainFilterTaskPageObject;
 import org.junit.Test;
 
 public class FilterAssigneeTest extends CoreTestCase {
@@ -12,7 +12,7 @@ public class FilterAssigneeTest extends CoreTestCase {
         LoginPageObject LoginPageObject = new LoginPageObject(driver);
         LoginPageObject.loginMethod();
 
-        FilterTaskPageObject FilterTaskPageObject = new FilterTaskPageObject(driver);
-        FilterTaskPageObject.changeFilterCondition();
+        MainFilterTaskPageObject MainFilterTaskPageObject = new MainFilterTaskPageObject(driver);
+        MainFilterTaskPageObject.changeFilterCondition();
     }
 }
