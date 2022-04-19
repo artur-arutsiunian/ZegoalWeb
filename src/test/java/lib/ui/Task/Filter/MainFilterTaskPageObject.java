@@ -8,8 +8,9 @@ public class MainFilterTaskPageObject extends MainPageObject {
 
     private final static String
     CHOOSE_USER_FILTER = "(//span[@class='filter-title_title__2csu7'])[1]",
-    ENTER_NAME_USER = "//input[@id='react-select-2-input']",
+    ENTER_NAME_USER = "(//input[@placeholder='Search'])[2]",
     CHOOSE_NAME_USER = "//div[@class='css-15l7072-option not-selected']",
+    CLICK_ON_ANY_PLACE_ON_THE_PAGE = "(//div[@aria-hidden='true'])[2]",
     ASSIGNEE_PRESENT_ON_THE_PAGE = "(//div[@title='2907'])[1]";
 
     public MainFilterTaskPageObject(WebDriver driver)
@@ -32,13 +33,19 @@ public class MainFilterTaskPageObject extends MainPageObject {
                 5
         );
         Thread.sleep(2000);
-        waitForElementAndClick(
+        this.waitForElementAndClick(
                 By.xpath(CHOOSE_NAME_USER),
                 "can't find user name",
                 5
         );
         Thread.sleep(2000);
-        waitForElementPresent(
+        this.waitForElementAndClickOnScreenByNotInteractableElement(
+                By.xpath(CLICK_ON_ANY_PLACE_ON_THE_PAGE),
+                "can't click on any place on the page",
+                5
+        );
+        Thread.sleep(2000);
+        this.waitForElementPresent(
                 By.xpath(ASSIGNEE_PRESENT_ON_THE_PAGE),
                 "can't find chosen assignee",
                 5

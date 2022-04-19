@@ -24,13 +24,13 @@ public class AdditionalFilterTaskPageObject extends MainPageObject {
                 5
         );
         Thread.sleep(2000);
-        waitForElementAndClick(
+        this.waitForElementAndClick(
                 By.xpath(DUE_TODAY_ELEMENT_OF_LIST),
                 "can't click on 'Due today'",
                 5
         );
         Thread.sleep(2000);
-        waitForElementPresent(
+        this.waitForElementPresent(
                 By.xpath(DUE_TODAY_CHOSEN_ON_THE_PAGE),
                 "can't find 'Due today' on the page",
                 5

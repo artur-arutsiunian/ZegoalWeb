@@ -5,7 +5,7 @@ import lib.ui.Epic.EpicPageObject;
 import lib.ui.Login.LoginPageObject;
 import org.junit.Test;
 
-public class EpicTest extends CoreTestCase {
+public class CreateEpicTest extends CoreTestCase {
 
     @Test
     public void testCreateEpic() throws InterruptedException{

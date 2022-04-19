@@ -1,8 +1,10 @@
 package lib.ui;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -47,6 +49,18 @@ public class MainPageObject {
         return element;
     }
 
+    //на заметку: кликать можно только если элемент интерактивный(то же самое с поиском по координатам), если не интерактивный элемент, то нужен метод ниже:
+    public WebElement waitForElementAndClickOnScreenByNotInteractableElement(By by, String error_message, long timeoutInSeconds){
+        WebElement element = waitForElementPresent(by, error_message, timeoutInSeconds);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).click().build().perform();
+        return element;
+    }
+
+    public void scrollOnThePage(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,2000)");
+        }
 
     public boolean waitForElementNotPresent(By by, String error_message, long timeoutInSeconds) {
         WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);

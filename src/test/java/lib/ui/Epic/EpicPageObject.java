@@ -14,7 +14,7 @@ public class EpicPageObject extends MainPageObject {
     CHOOSE_ASSIGNEE = "(//span[@class='MuiIconButton-label'])[10]",
     COMPLETE_EPIC_CREATION = "//span[@class='button_title__3rgHS']",
     CLOSE_BUTTON = "(//span[@class='MuiIconButton-label'])[4]",
-    NAME_ON_TOP = "//div[text()='Tasks']";
+    EPIC_TAB_IS_SELECTED = "//a[@aria-selected='true']";
 
 
     public EpicPageObject(WebDriver driver)
@@ -68,7 +68,7 @@ public class EpicPageObject extends MainPageObject {
         );
         Thread.sleep(2000);
         this.waitForElementPresent(
-                By.xpath(NAME_ON_TOP),
+                By.xpath(EPIC_TAB_IS_SELECTED),
                 "",
                 5
         );

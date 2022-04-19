@@ -14,8 +14,7 @@ public class CreateTaskPageObject extends MainPageObject {
             CHOOSE_LOCATION = "(//span[@class='MuiIconButton-label'])[11]",
             CLICK_ON_ASSIGNEE_FIELD = "(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart'])[1]",
             CHOOSE_ASSIGNEE = "(//span[@class='MuiIconButton-label'])[13]",
-            COMPLETE_TASK_CREATION = "//span[@class='button_title__3rgHS']",
-            NAME_ON_TOP = "//div[text()='Tasks']";
+            COMPLETE_TASK_CREATION = "//span[@class='button_title__3rgHS']";
 
     public CreateTaskPageObject(WebDriver driver) {
         super(driver);
@@ -68,13 +67,6 @@ public class CreateTaskPageObject extends MainPageObject {
         this.waitForElementAndClick(
                 By.xpath(COMPLETE_TASK_CREATION),
                 "can't click on final 'Create' button",
-                5
-        );
-
-        Thread.sleep(2000);
-        this.waitForElementPresent(
-                By.xpath(NAME_ON_TOP),
-                "can't find 'Tasks' title on the top of the main page",
                 5
         );
     }
