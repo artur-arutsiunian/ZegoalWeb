@@ -25,7 +25,5 @@ public class EditTaskTest extends CoreTestCase {
 
         EditTaskPageObject EditTaskPageObject = new EditTaskPageObject(driver);
         EditTaskPageObject.editTaskMethod();
-        String user_name = EditTaskPageObject.editTaskMethod2();
-        Assert.assertEquals("expected result not correspond actual","Brad Rouse", user_name);
     }
 }

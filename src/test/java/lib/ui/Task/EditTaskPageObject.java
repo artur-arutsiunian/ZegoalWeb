@@ -57,16 +57,11 @@ public class EditTaskPageObject extends MainPageObject {
                 "can't click on 'save' button",
                 5
         );
-    }
-        public String editTaskMethod2() throws InterruptedException {
             Thread.sleep(2000);
             this.waitForElementPresent(
                     By.xpath(ASSIGNEE_WHICH_WAS_CHANGED_PRESENT_ON_THE_PAGE),
                     "can't find assignee which was changed",
                     5
-
             );
-            String user = this.waitForElementPresent(By.xpath(ASSIGNEE_WHICH_WAS_CHANGED_PRESENT_ON_THE_PAGE), "can't find assignee which was changed", 5).getText();
-            return user;
         }
     }
