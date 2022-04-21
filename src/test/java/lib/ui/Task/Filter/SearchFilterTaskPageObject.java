@@ -4,15 +4,15 @@ import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class SearchFilterOnTheStartPage extends MainPageObject {
+public class SearchFilterTaskPageObject extends MainPageObject {
 
     private final static String
     SEARCH_FIELD = "//input[@placeholder='Search']",
     TASK_PRESENT_ON_THE_PAGE = "//span[text()='100']",
     DELETE_DATA_FROM_THE_FIELD = "(//span[@class='MuiIconButton-label'])[5]",
-    TASK_NOT_PRESENT_THE_PAGE = "//span[text()='100']";
+    TASK_IS_NOT_PRESENT_ON_THE_PAGE = "//span[text()='100']";
 
-    public SearchFilterOnTheStartPage(WebDriver driver)
+    public SearchFilterTaskPageObject(WebDriver driver)
     {
         super(driver);
     }
@@ -39,7 +39,7 @@ public class SearchFilterOnTheStartPage extends MainPageObject {
         );
         Thread.sleep(2000);
         this.waitForElementNotPresent(
-                By.xpath(TASK_NOT_PRESENT_THE_PAGE),
+                By.xpath(TASK_IS_NOT_PRESENT_ON_THE_PAGE),
                 "Can't assure that task isn't present on the page",
                 5
         );

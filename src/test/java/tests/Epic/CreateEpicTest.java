@@ -1,7 +1,7 @@
 package tests.Epic;
 
 import lib.CoreTestCase;
-import lib.ui.Epic.EpicPageObject;
+import lib.ui.Epic.CreateEpicPageObject;
 import lib.ui.Login.LoginPageObject;
 import org.junit.Test;
 
@@ -12,8 +12,8 @@ public class CreateEpicTest extends CoreTestCase {
         LoginPageObject LoginPageObject = new LoginPageObject(driver);
         LoginPageObject.loginMethod();
 
-        EpicPageObject EpicPageObject = new EpicPageObject(driver);
-        EpicPageObject.createEpicMethod();
+        CreateEpicPageObject CreateEpicPageObject = new CreateEpicPageObject(driver);
+        CreateEpicPageObject.createEpicMethod();
 
     }
 }

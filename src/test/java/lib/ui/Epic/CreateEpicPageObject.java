@@ -4,7 +4,7 @@ import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class EpicPageObject extends MainPageObject {
+public class CreateEpicPageObject extends MainPageObject {
 
     private final static String
     MOVE_TO_EPIC = "//a[@class='MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary']",
@@ -17,7 +17,7 @@ public class EpicPageObject extends MainPageObject {
     EPIC_TAB_IS_SELECTED = "//a[@aria-selected='true']";
 
 
-    public EpicPageObject(WebDriver driver)
+    public CreateEpicPageObject(WebDriver driver)
     {
         super(driver);
     }
@@ -26,7 +26,7 @@ public class EpicPageObject extends MainPageObject {
         Thread.sleep(2000);
         this.waitForElementAndClick(
                 By.xpath(MOVE_TO_EPIC),
-                "can't click on 'Epic'",
+                "can't click on 'Epic' tab",
                 5
         );
         Thread.sleep(2000);
