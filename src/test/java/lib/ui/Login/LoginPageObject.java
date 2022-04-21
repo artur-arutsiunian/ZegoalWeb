@@ -11,7 +11,6 @@ public class LoginPageObject extends MainPageObject {
     PASSWORD = "//input[@name='password']",
     LOG_IN_BUTTON = "//span[text()='Login']";
 
-
     public LoginPageObject(WebDriver driver)
     {
         super(driver);
@@ -25,7 +24,6 @@ public class LoginPageObject extends MainPageObject {
                 "Can't find 'Login' field",
                 5
         );
-
         Thread.sleep(2000);
         this.waitForElementAndSendKeys(
                 By.xpath(PASSWORD),
@@ -33,7 +31,6 @@ public class LoginPageObject extends MainPageObject {
                 "Can't find 'Password' field",
                 5
         );
-
         Thread.sleep(2000);
         this.waitForElementAndClick(
                 By.xpath(LOG_IN_BUTTON),
@@ -41,5 +38,4 @@ public class LoginPageObject extends MainPageObject {
                 5
         );
     }
-
 }

@@ -11,5 +11,4 @@ public class LoginTest extends CoreTestCase {
         LoginPageObject loginPageObject = new LoginPageObject(driver);
         loginPageObject.loginMethod();
     }
-
 }
