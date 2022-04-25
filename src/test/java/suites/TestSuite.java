@@ -4,10 +4,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import tests.Epic.CreateEpicTest;
 import tests.Epic.DeleteEpicTest;
-import tests.Task.AddLabelTest;
-import tests.Task.CreateTaskTest;
-import tests.Task.EditTaskTest;
-import tests.Task.FilterTest;
+import tests.Task.*;
+import tests.staff.CreateUserTest;
 
 @RunWith(Suite.class)
 
@@ -16,8 +14,11 @@ import tests.Task.FilterTest;
         DeleteEpicTest.class,
         CreateTaskTest.class,
         AddLabelTest.class,
+        AddRemarkTest.class,
+        AddCommentTest.class,
         EditTaskTest.class,
-        FilterTest.class
+        FilterTest.class,
+        CreateUserTest.class
 })
 
 public class TestSuite {}
