@@ -14,7 +14,7 @@ public class CreateEpicPageObject extends MainPageObject {
     CHOOSE_ASSIGNEE = "(//span[@class='MuiIconButton-label'])[10]",
     COMPLETE_EPIC_CREATION = "//span[@class='button_title__3rgHS']",
     CLOSE_BUTTON = "(//span[@class='MuiIconButton-label'])[4]",
-    EPIC_TAB_IS_SELECTED = "//a[@aria-selected='true']";
+    EPIC_TAB_IS_SELECTED = "//a[@aria-selected='true']//span[text()='Epics']";
 
 
     public CreateEpicPageObject(WebDriver driver)

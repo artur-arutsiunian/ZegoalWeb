@@ -1,4 +1,4 @@
-package lib.ui.Task;
+package lib.ui.Task.Remark;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
@@ -12,7 +12,8 @@ public class AddRemarkToTaskPageObject extends MainPageObject {
     CONFIRM_ABSENCE_OF_REMARK = "(//span[text()='N/A'])[2]",
     CLICK_ON_CREATE_REMARK = "(//span[@class='MuiIconButton-label'])[6]",
     ENTER_NAME = "//textarea[@placeholder='Name']",
-    COMPLETE_CREATE_REMARK = "(//span[@class='MuiIconButton-label'])[11]";
+    COMPLETE_CREATE_REMARK = "(//span[@class='MuiIconButton-label'])[11]",
+    REMARK_EXISTS_ON_THE_PAGE = "(//div[@class='container_container__2CrLs'])[2]";
 
     public AddRemarkToTaskPageObject(WebDriver driver)
     {
@@ -49,6 +50,12 @@ public class AddRemarkToTaskPageObject extends MainPageObject {
         this.waitForElementAndClick(
                 By.xpath(COMPLETE_CREATE_REMARK),
                 "can't find complete check",
+                5
+        );
+        Thread.sleep(2000);
+        this.waitForElementPresent(
+                By.xpath(REMARK_EXISTS_ON_THE_PAGE),
+                "can't find remark on the page",
                 5
         );
     }

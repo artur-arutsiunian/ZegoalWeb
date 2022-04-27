@@ -2,7 +2,7 @@ package tests.Task;
 
 import lib.CoreTestCase;
 import lib.ui.Login.LoginPageObject;
-import lib.ui.Task.AddRemarkToTaskPageObject;
+import lib.ui.Task.Remark.AddRemarkToTaskPageObject;
 import org.junit.Test;
 
 public class AddRemarkTest extends CoreTestCase {

@@ -1,4 +1,4 @@
-package lib.ui.Task;
+package lib.ui.Task.Comment;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;

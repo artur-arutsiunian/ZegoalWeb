@@ -2,7 +2,7 @@ package tests.Task;
 
 import lib.CoreTestCase;
 import lib.ui.Login.LoginPageObject;
-import lib.ui.Task.AddCommentToTaskPageObject;
+import lib.ui.Task.Comment.AddCommentToTaskPageObject;
 import org.junit.Test;
 
 public class AddCommentTest extends CoreTestCase {

@@ -15,7 +15,10 @@ import tests.staff.CreateUserTest;
         CreateTaskTest.class,
         AddLabelTest.class,
         AddRemarkTest.class,
+        CancelRemarkTest.class,
         AddCommentTest.class,
+        CancelCommentTest.class,
+        DeleteTaskTest.class,
         EditTaskTest.class,
         FilterTest.class,
         CreateUserTest.class
