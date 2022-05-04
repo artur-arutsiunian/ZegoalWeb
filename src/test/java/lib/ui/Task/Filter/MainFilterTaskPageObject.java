@@ -1,8 +1,10 @@
 package lib.ui.Task.Filter;
 
 import lib.ui.MainPageObject;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class MainFilterTaskPageObject extends MainPageObject {
 
@@ -45,10 +47,13 @@ public class MainFilterTaskPageObject extends MainPageObject {
                 5
         );
         Thread.sleep(2000);
-        this.waitForElementPresent(
+        WebElement user_name = this.waitForElementPresent(
                 By.xpath(ASSIGNEE_PRESENT_ON_THE_PAGE),
                 "can't find chosen assignee",
                 5
         );
+
+        String proof_of_user_name = user_name.getText();
+        Assert.assertEquals("can't proof user name", proof_of_user_name, "2907");
     }
 }
