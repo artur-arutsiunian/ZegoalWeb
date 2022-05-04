@@ -4,8 +4,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import tests.Epic.CreateEpicTest;
 import tests.Epic.DeleteEpicTest;
+import tests.Maps.ChooseUserTest;
+import tests.Maps.FilterOnMapTest;
 import tests.Task.*;
-import tests.staff.CreateUserTest;
+import tests.Staff.CreateUserTest;
 
 @RunWith(Suite.class)
 
@@ -16,11 +18,14 @@ import tests.staff.CreateUserTest;
         AddLabelTest.class,
         AddRemarkTest.class,
         CancelRemarkTest.class,
+        DeleteRemarkTest.class,
         AddCommentTest.class,
         CancelCommentTest.class,
         DeleteTaskTest.class,
         EditTaskTest.class,
         FilterTest.class,
+        ChooseUserTest.class,
+        FilterOnMapTest.class,
         CreateUserTest.class
 })
 

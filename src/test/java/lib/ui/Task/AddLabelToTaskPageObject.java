@@ -9,7 +9,7 @@ public class AddLabelToTaskPageObject extends MainPageObject {
     private final static String
     CHOOSE_TASK = "(//span[@class='status-cell_link-cell__w93Tz'])[1]",
     CLICK_ON_LABEL_FIELD = "(//div[text()='N/A'])[1]",
-    ADD_LABEL = "(//li[@class='MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button'])[1]",
+    ADD_LABEL = "//li[text()='Фиолетовая метка']",
     LABEL_PRESENT_ON_THE_PAGE = "//div[text()='Фиолетовая метка']";
 
     public AddLabelToTaskPageObject(WebDriver driver)

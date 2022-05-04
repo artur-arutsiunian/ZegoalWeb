@@ -30,6 +30,20 @@ public class MainPageObject {
         return waitForElementPresent(by, error_message, 5);
     }
 
+    public WebElement waitForElementsPresent(By by, String error_message, long timeoutInSeconds)
+    {
+        WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
+        wait.withMessage(error_message + "\n");
+        return (WebElement) wait.until(
+                ExpectedConditions.presenceOfAllElementsLocatedBy(by)
+        );
+    }
+
+    public WebElement waitForElementsPresent(By by, String error_message)
+    {
+        return waitForElementsPresent(by, error_message, 5);
+    }
+
     //как вариант по идеи рабочий метод для получение свойства(атрибута) элемента (в chrome это properties)
     public WebElement waitForElementPresentAndAttribute(By by, String value, String error_message, long timeoutInSeconds) {
         WebElement element = waitForElementPresent(by, error_message, timeoutInSeconds);

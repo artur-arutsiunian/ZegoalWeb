@@ -1,4 +1,4 @@
-package tests.staff;
+package tests.Staff;
 
 import lib.CoreTestCase;
 import lib.ui.Login.LoginPageObject;
