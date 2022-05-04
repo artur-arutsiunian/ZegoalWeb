@@ -13,6 +13,7 @@ public class CreateEpicPageObject extends MainPageObject {
     CLICK_ON_ASSIGNEE_FIELD = "(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart'])[2]",
     CHOOSE_ASSIGNEE = "(//span[@class='MuiIconButton-label'])[10]",
     COMPLETE_EPIC_CREATION = "//span[@class='button_title__3rgHS']",
+    EPIC_HAS_BEEN_CREATED = "//span[text()='Epic for auto test']",
     CLOSE_BUTTON = "(//span[@class='MuiIconButton-label'])[4]",
     EPIC_TAB_IS_SELECTED = "//a[@aria-selected='true']//span[text()='Epics']";
 
@@ -58,6 +59,12 @@ public class CreateEpicPageObject extends MainPageObject {
         this.waitForElementAndClick(
                 By.xpath(COMPLETE_EPIC_CREATION),
                 "can't click on final 'Create' button",
+                5
+        );
+        Thread.sleep(2000);
+        this.waitForElementPresent(
+                By.xpath(EPIC_HAS_BEEN_CREATED),
+                "can't confirm that epic has been created",
                 5
         );
         Thread.sleep(2000);
