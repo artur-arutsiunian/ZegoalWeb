@@ -3,12 +3,17 @@ package lib.ui.Task;
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AddLabelToTaskPageObject extends MainPageObject {
 
     private final static String
     CHOOSE_TASK = "(//span[@class='status-cell_link-cell__w93Tz'])[1]",
     CLICK_ON_LABEL_FIELD = "(//div[text()='N/A'])[1]",
+    ADD_LABEL2 = "//div[@class='MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded']/ul/li",
     ADD_LABEL = "//li[text()='Фиолетовая метка']",
     LABEL_PRESENT_ON_THE_PAGE = "//div[text()='Фиолетовая метка']";
 
@@ -16,6 +21,12 @@ public class AddLabelToTaskPageObject extends MainPageObject {
     {
         super(driver);
     }
+
+//    public List<WebElement> waitForElementsAndClick(By by, String error_message, long timeoutInSeconds) {
+//        List<WebElement> elements = this.waitForElementsPresent(by, error_message, 5);
+//        elements.get(1).click();
+//        return elements;
+//    }
 
     public void addLabelMethod() throws InterruptedException {
         Thread.sleep(2000);
@@ -30,6 +41,12 @@ public class AddLabelToTaskPageObject extends MainPageObject {
                 "can't find 'label field",
                 5
         );
+//                Thread.sleep(2000);
+//        this.waitForElementsAndClick(
+//                By.xpath(ADD_LABEL2),
+//                "can't click on label",
+//                5
+//        );
         Thread.sleep(2000);
         this.waitForElementAndClick(
                 By.xpath(ADD_LABEL),

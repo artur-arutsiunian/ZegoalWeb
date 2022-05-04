@@ -8,6 +8,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 public class MainPageObject {
 
     protected WebDriver driver;
@@ -30,18 +32,19 @@ public class MainPageObject {
         return waitForElementPresent(by, error_message, 5);
     }
 
-    public WebElement waitForElementsPresent(By by, String error_message, long timeoutInSeconds)
+    //пример как использовать List есть в классе AddLabelToTaskPageObject
+    public List<WebElement> waitForElementsPresent(By by, String error_message, long timeoutInSeconds)
     {
         WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
         wait.withMessage(error_message + "\n");
-        return (WebElement) wait.until(
+        return (List<WebElement>) wait.until(
                 ExpectedConditions.presenceOfAllElementsLocatedBy(by)
         );
     }
 
     public WebElement waitForElementsPresent(By by, String error_message)
     {
-        return waitForElementsPresent(by, error_message, 5);
+        return (WebElement) waitForElementsPresent(by, error_message, 5);
     }
 
     //как вариант по идеи рабочий метод для получение свойства(атрибута) элемента (в chrome это properties)
