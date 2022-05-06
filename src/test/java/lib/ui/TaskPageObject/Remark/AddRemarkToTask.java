@@ -1,11 +1,10 @@
-package lib.ui.Task.Remark;
+package lib.ui.TaskPageObject.Remark;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-public class AddRemarkToTaskPageObject extends MainPageObject {
+public class AddRemarkToTask extends MainPageObject {
 
     private final static String
     CHOOSE_TASK = "(//span[@class='status-cell_link-cell__w93Tz'])[2]",
@@ -15,7 +14,7 @@ public class AddRemarkToTaskPageObject extends MainPageObject {
     COMPLETE_CREATE_REMARK = "(//span[@class='MuiIconButton-label'])[11]",
     REMARK_EXISTS_ON_THE_PAGE = "(//div[@class='container_container__2CrLs'])[2]";
 
-    public AddRemarkToTaskPageObject(WebDriver driver)
+    public AddRemarkToTask(WebDriver driver)
     {
         super(driver);
     }

@@ -1,10 +1,10 @@
-package lib.ui.Task.Filter;
+package lib.ui.TaskPageObject.Filter;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class SearchFilterTaskPageObject extends MainPageObject {
+public class SearchFilterTask extends MainPageObject {
 
     private final static String
     SEARCH_FIELD = "//input[@placeholder='Search']",
@@ -12,7 +12,7 @@ public class SearchFilterTaskPageObject extends MainPageObject {
     DELETE_DATA_FROM_THE_FIELD = "(//span[@class='MuiIconButton-label'])[5]",
     TASK_IS_NOT_PRESENT_ON_THE_PAGE = "//span[text()='100']";
 
-    public SearchFilterTaskPageObject(WebDriver driver)
+    public SearchFilterTask(WebDriver driver)
     {
         super(driver);
     }

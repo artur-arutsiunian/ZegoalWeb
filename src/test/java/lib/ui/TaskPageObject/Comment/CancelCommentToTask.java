@@ -1,19 +1,19 @@
-package lib.ui.Task.Remark;
+package lib.ui.TaskPageObject.Comment;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class CancelRemarkToTaskPageObject extends MainPageObject {
+public class CancelCommentToTask extends MainPageObject {
 
     private final static String
     CHOOSE_TASK = "(//span[@class='status-cell_link-cell__w93Tz'])[2]",
-    CLICK_ON_CREATE_REMARK = "(//span[@class='MuiIconButton-label'])[6]",
-    CANCEL_ADD_REMARK = "(//span[@class='MuiIconButton-label'])[10]",
+    CLICK_ON_CREATE_COMMENT = "(//span[@class='MuiIconButton-label'])[5]",
+    CANCEL_ADD_COMMENT = "(//span[@class='MuiIconButton-label'])[10]",
     BACK_TO_MAIN_PAGE = "(//span[@class='MuiIconButton-label'])[4]",
     TASK_TAB_IS_SELECTED = "//a[@aria-selected='true']//span[text()='Individual']";
 
-    public CancelRemarkToTaskPageObject(WebDriver driver)
+    public CancelCommentToTask(WebDriver driver)
     {
         super(driver);
     }
@@ -25,7 +25,7 @@ public class CancelRemarkToTaskPageObject extends MainPageObject {
             ++number_of_tapping_numbers;}
     }
 
-    public void cancelRemarkMethod() throws InterruptedException {
+    public void cancelCommentMethod() throws InterruptedException {
         Thread.sleep(5000);
         this.waitForElementAndClick(
                 By.xpath(CHOOSE_TASK),
@@ -34,13 +34,13 @@ public class CancelRemarkToTaskPageObject extends MainPageObject {
         );
         Thread.sleep(5000);
         this.waitForElementAndClick(
-                By.xpath(CLICK_ON_CREATE_REMARK),
+                By.xpath(CLICK_ON_CREATE_COMMENT),
                 "can't click on add comment",
                 5
         );
         Thread.sleep(5000);
         this.waitForElementAndClick(
-                By.xpath(CANCEL_ADD_REMARK),
+                By.xpath(CANCEL_ADD_COMMENT),
                 "can't click on 'x' button",
                 5
         );

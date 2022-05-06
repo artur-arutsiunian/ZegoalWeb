@@ -1,26 +1,26 @@
 package tests.Task;
 
 import lib.CoreTestCase;
-import lib.ui.Login.LoginPageObject;
-import lib.ui.Task.AddLabelToTaskPageObject;
-import lib.ui.Task.Filter.AdditionalFilterTaskPageObject;
-import lib.ui.Task.Filter.MainFilterTaskPageObject;
+import lib.ui.LoginPageObject.Login;
+import lib.ui.TaskPageObject.AddLabelToTask;
+import lib.ui.TaskPageObject.Filter.AdditionalFilter;
+import lib.ui.TaskPageObject.Filter.MainFilterTask;
 import org.junit.Test;
 
 public class AddLabelTest extends CoreTestCase {
 
     @Test
     public void testAddLabel() throws InterruptedException {
-        LoginPageObject LoginPageObject = new LoginPageObject(driver);
-        LoginPageObject.loginMethod();
+        Login Login = new Login(driver);
+        Login.loginMethod();
 
-        AdditionalFilterTaskPageObject AdditionalFilterTaskPageObject = new AdditionalFilterTaskPageObject(driver);
-        AdditionalFilterTaskPageObject.changeAdditionalFilterCondition();
+        AdditionalFilter AdditionalFilter = new AdditionalFilter(driver);
+        AdditionalFilter.changeAdditionalFilterCondition();
 
-        MainFilterTaskPageObject MainFilterTaskPageObject = new MainFilterTaskPageObject(driver);
-        MainFilterTaskPageObject.changeFilterCondition();
+        MainFilterTask MainFilterTask = new MainFilterTask(driver);
+        MainFilterTask.changeFilterCondition();
 
-        AddLabelToTaskPageObject AddLabelToTaskPageObject = new AddLabelToTaskPageObject(driver);
-        AddLabelToTaskPageObject.addLabelMethod();
+        AddLabelToTask AddLabelToTask = new AddLabelToTask(driver);
+        AddLabelToTask.addLabelMethod();
     }
 }

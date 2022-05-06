@@ -1,10 +1,10 @@
-package lib.ui.Task;
+package lib.ui.TaskPageObject;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class DeleteTaskPageObject extends MainPageObject {
+public class DeleteTask extends MainPageObject {
 
     private final static String
     CHOOSE_TASK = "(//span[@class='status-cell_link-cell__w93Tz'])[6]",
@@ -12,7 +12,7 @@ public class DeleteTaskPageObject extends MainPageObject {
     CONFIRM_DELETE = "//span[text()='Delete']",
     TASK_TAB_IS_SELECTED = "//a[@aria-selected='true']//span[text()='Individual']";
 
-    public DeleteTaskPageObject(WebDriver driver)
+    public DeleteTask(WebDriver driver)
     {
         super(driver);
     }

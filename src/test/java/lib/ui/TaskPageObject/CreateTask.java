@@ -1,10 +1,10 @@
-package lib.ui.Task;
+package lib.ui.TaskPageObject;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class CreateTaskPageObject extends MainPageObject {
+public class CreateTask extends MainPageObject {
 
     private final static String
             CREATE_BUTTON = "//button[@class='add-button_addButton__1w3Jt button_green__zFAs3 button_zgButton__19tY7']",
@@ -13,10 +13,10 @@ public class CreateTaskPageObject extends MainPageObject {
             CLICK_ON_LOCATION_FIELD = "(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart'])[2]",
             CHOOSE_LOCATION = "(//span[@class='MuiIconButton-label'])[11]",
             CLICK_ON_ASSIGNEE_FIELD = "(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart'])[1]",
-            CHOOSE_ASSIGNEE = "(//span[@class='MuiIconButton-label'])[13]",
+            CHOOSE_ASSIGNEE = "//div[text()=' 2907']",
             COMPLETE_TASK_CREATION = "//span[@class='button_title__3rgHS']";
 
-    public CreateTaskPageObject(WebDriver driver) {
+    public CreateTask(WebDriver driver) {
         super(driver);
     }
 

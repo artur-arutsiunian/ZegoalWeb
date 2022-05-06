@@ -1,10 +1,10 @@
-package lib.ui.Task.Comment;
+package lib.ui.TaskPageObject.Comment;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class AddCommentToTaskPageObject extends MainPageObject {
+public class AddCommentToTask extends MainPageObject {
 
     private final static String
     CHOOSE_TASK = "(//span[@class='status-cell_link-cell__w93Tz'])[2]",
@@ -13,7 +13,7 @@ public class AddCommentToTaskPageObject extends MainPageObject {
     ADD_BUTTON = "//span[text()='Add']",
     COMMENT_IS_PRESENT_ON_THE_PAGE = "//span[text()='i add comment']";
 
-    public AddCommentToTaskPageObject(WebDriver driver)
+    public AddCommentToTask(WebDriver driver)
     {
         super(driver);
     }

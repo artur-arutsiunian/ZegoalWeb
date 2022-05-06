@@ -1,24 +1,24 @@
-package lib.ui.Epic;
+package lib.ui.EpicPageObject;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class CreateEpicPageObject extends MainPageObject {
+public class CreateEpic extends MainPageObject {
 
     private final static String
     MOVE_TO_EPIC = "//a[@class='MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary']",
     CREATE_BUTTON = "//button[@class='add-button_addButton__1w3Jt button_green__zFAs3 button_zgButton__19tY7']",
     ENTER_EPIC_NAME = "(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart'])[1]",
     CLICK_ON_ASSIGNEE_FIELD = "(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart'])[2]",
-    CHOOSE_ASSIGNEE = "(//span[@class='MuiIconButton-label'])[10]",
+    CHOOSE_ASSIGNEE = "//div[text()=' 2907']",
     COMPLETE_EPIC_CREATION = "//span[@class='button_title__3rgHS']",
     EPIC_HAS_BEEN_CREATED = "//span[text()='Epic for auto test']",
     CLOSE_BUTTON = "(//span[@class='MuiIconButton-label'])[4]",
     EPIC_TAB_IS_SELECTED = "//a[@aria-selected='true']//span[text()='Epics']";
 
 
-    public CreateEpicPageObject(WebDriver driver)
+    public CreateEpic(WebDriver driver)
     {
         super(driver);
     }

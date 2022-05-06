@@ -1,18 +1,18 @@
 package tests.Task;
 
 import lib.CoreTestCase;
-import lib.ui.Login.LoginPageObject;
-import lib.ui.Task.Comment.AddCommentToTaskPageObject;
+import lib.ui.LoginPageObject.Login;
+import lib.ui.TaskPageObject.Comment.AddCommentToTask;
 import org.junit.Test;
 
 public class AddCommentTest extends CoreTestCase {
 
     @Test
     public void testAddComment() throws InterruptedException {
-        LoginPageObject LoginPageObject = new LoginPageObject(driver);
-        LoginPageObject.loginMethod();
+        Login Login = new Login(driver);
+        Login.loginMethod();
 
-        AddCommentToTaskPageObject AddCommentToTaskPageObject = new AddCommentToTaskPageObject(driver);
-        AddCommentToTaskPageObject.addCommentMethod();
+        AddCommentToTask AddCommentToTask = new AddCommentToTask(driver);
+        AddCommentToTask.addCommentMethod();
     }
 }

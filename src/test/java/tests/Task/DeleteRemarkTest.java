@@ -1,18 +1,18 @@
 package tests.Task;
 
 import lib.CoreTestCase;
-import lib.ui.Login.LoginPageObject;
-import lib.ui.Task.Remark.DeleteRemarkTaskPageObject;
+import lib.ui.LoginPageObject.Login;
+import lib.ui.TaskPageObject.Remark.DeleteRemarkToTask;
 import org.junit.Test;
 
 public class DeleteRemarkTest extends CoreTestCase {
 
     @Test
     public void testDeleteRemark() throws InterruptedException {
-        LoginPageObject LoginPageObject = new LoginPageObject(driver);
-        LoginPageObject.loginMethod();
+        Login Login = new Login(driver);
+        Login.loginMethod();
 
-        DeleteRemarkTaskPageObject DeleteRemarkTaskPageObject = new DeleteRemarkTaskPageObject(driver);
-        DeleteRemarkTaskPageObject.deleteRemarkMethod();
+        DeleteRemarkToTask DeleteRemarkToTask = new DeleteRemarkToTask(driver);
+        DeleteRemarkToTask.deleteRemarkMethod();
     }
 }

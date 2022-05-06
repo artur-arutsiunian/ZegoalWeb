@@ -1,18 +1,18 @@
 package tests.Staff;
 
 import lib.CoreTestCase;
-import lib.ui.Login.LoginPageObject;
-import lib.ui.user.CreateUserPageObject;
+import lib.ui.LoginPageObject.Login;
+import lib.ui.StaffPageObject.CreateUser;
 import org.junit.Test;
 
 public class CreateUserTest extends CoreTestCase {
 
     @Test
     public void testCreateUser() throws InterruptedException {
-        LoginPageObject LoginPageObject = new LoginPageObject(driver);
-        LoginPageObject.loginMethod();
+        Login Login = new Login(driver);
+        Login.loginMethod();
 
-        CreateUserPageObject CreateUserPageObject = new CreateUserPageObject(driver);
-        CreateUserPageObject.createUserMethod();
+        CreateUser CreateUser = new CreateUser(driver);
+        CreateUser.createUserMethod();
     }
 }

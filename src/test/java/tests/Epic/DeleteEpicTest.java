@@ -1,26 +1,26 @@
 package tests.Epic;
 
 import lib.CoreTestCase;
-import lib.ui.Epic.DeleteEpicPageObject;
-import lib.ui.Login.LoginPageObject;
-import lib.ui.Task.Filter.epic.MainFilterEpicPageObject;
-import lib.ui.Task.Filter.epic.MoveToEpicPageObject;
+import lib.ui.EpicPageObject.DeleteEpic;
+import lib.ui.LoginPageObject.Login;
+import lib.ui.EpicPageObject.Filter.MainFilterEpic;
+import lib.ui.EpicPageObject.MoveToEpic;
 import org.junit.Test;
 
 public class DeleteEpicTest extends CoreTestCase {
 
     @Test
     public void testDeleteEpic() throws InterruptedException {
-        LoginPageObject LoginPageObject = new LoginPageObject(driver);
-        LoginPageObject.loginMethod();
+        Login Login = new Login(driver);
+        Login.loginMethod();
 
-        MoveToEpicPageObject MoveToEpicPageObject = new MoveToEpicPageObject(driver);
-        MoveToEpicPageObject.moveToEpicMethod();
+        MoveToEpic MoveToEpic = new MoveToEpic(driver);
+        MoveToEpic.moveToEpicMethod();
 
-        MainFilterEpicPageObject MainFilterEpicPageObject = new MainFilterEpicPageObject(driver);
-        MainFilterEpicPageObject.changeFilterCondition();
+        MainFilterEpic MainFilterEpic = new MainFilterEpic(driver);
+        MainFilterEpic.changeFilterCondition();
 
-        DeleteEpicPageObject DeleteEpicPageObject = new DeleteEpicPageObject(driver);
-        DeleteEpicPageObject.deleteEpicMethod();
+        DeleteEpic DeleteEpic = new DeleteEpic(driver);
+        DeleteEpic.deleteEpicMethod();
     }
 }

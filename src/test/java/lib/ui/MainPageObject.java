@@ -1,5 +1,6 @@
 package lib.ui;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -32,7 +33,7 @@ public class MainPageObject {
         return waitForElementPresent(by, error_message, 5);
     }
 
-    //пример как использовать List есть в классе AddLabelToTaskPageObject
+    //пример как использовать List есть в классе AddLabelToTask
     public List<WebElement> waitForElementsPresent(By by, String error_message, long timeoutInSeconds)
     {
         WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
@@ -42,9 +43,9 @@ public class MainPageObject {
         );
     }
 
-    public WebElement waitForElementsPresent(By by, String error_message)
+    public List<WebElement> waitForElementsPresent(By by, String error_message)
     {
-        return (WebElement) waitForElementsPresent(by, error_message, 5);
+        return waitForElementsPresent(by, error_message, 5);
     }
 
     //как вариант по идеи рабочий метод для получение свойства(атрибута) элемента (в chrome это properties)
@@ -91,5 +92,28 @@ public class MainPageObject {
         WebElement element = waitForElementPresent(by, error_message, timeoutInSeconds);
         element.clear();
         return element;
+    }
+
+    public int getAmountOfElements(By by)
+    {
+        List elements = driver.findElements(by);
+        return elements.size();
+    }
+
+    public List<WebElement> waitForElementsPresentSize(By by, String error_message, long timeoutInSeconds) {
+        List<WebElement> elements = waitForElementsPresent(by, error_message, 5);
+        elements.size();
+        return elements;
+    }
+
+    public WebElement assertElementHasText(By by, String expected_text, String error_message){
+        WebElement titleElement = waitForElementPresent(by, error_message);
+        String article_title = titleElement.getText();
+        Assert.assertEquals(
+                error_message,
+                expected_text,
+                article_title
+        );
+        return titleElement;
     }
 }

@@ -1,10 +1,12 @@
-package lib.ui.Epic;
+package lib.ui.EpicPageObject;
 
 import lib.ui.MainPageObject;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
-public class DeleteEpicPageObject extends MainPageObject {
+public class DeleteEpic extends MainPageObject {
 
     private final static String
     CLICK_ON_EPIC = "(//span[@class='status-cell_link-cell__ihudg'])[1]",
@@ -12,7 +14,7 @@ public class DeleteEpicPageObject extends MainPageObject {
     CONFIRM_DELETE = "(//span[text()='Yes'])[2]",
     EPIC_TAB_IS_SELECTED = "//a[@aria-selected='true']//span[text()='Epics']";
 
-    public DeleteEpicPageObject(WebDriver driver)
+    public DeleteEpic(WebDriver driver)
     {
         super(driver);
     }
@@ -37,10 +39,10 @@ public class DeleteEpicPageObject extends MainPageObject {
                 5
         );
         Thread.sleep(2000);
-        this.waitForElementPresent(
+        this.assertElementHasText(
                 By.xpath(EPIC_TAB_IS_SELECTED),
-                "Can't assure that epic tab is selected",
-                5
+                "Epics",
+                "can't proof that epic is selected"
         );
     }
 }

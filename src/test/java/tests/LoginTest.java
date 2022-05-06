@@ -1,14 +1,14 @@
 package tests;
 
 import lib.CoreTestCase;
-import lib.ui.Login.LoginPageObject;
+import lib.ui.LoginPageObject.Login;
 import org.junit.Test;
 
 public class LoginTest extends CoreTestCase {
 
     @Test
     public void testLoginOnStartPage() throws InterruptedException{
-        LoginPageObject loginPageObject = new LoginPageObject(driver);
-        loginPageObject.loginMethod();
+        Login Login = new Login(driver);
+        Login.loginMethod();
     }
 }

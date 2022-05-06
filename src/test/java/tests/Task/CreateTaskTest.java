@@ -1,10 +1,10 @@
 package tests.Task;
 
 import lib.CoreTestCase;
-import lib.ui.Login.LoginPageObject;
-import lib.ui.Task.CreateTaskPageObject;
-import lib.ui.Task.Filter.AdditionalFilterTaskPageObject;
-import lib.ui.Task.Filter.MainFilterTaskPageObject;
+import lib.ui.LoginPageObject.Login;
+import lib.ui.TaskPageObject.CreateTask;
+import lib.ui.TaskPageObject.Filter.AdditionalFilter;
+import lib.ui.TaskPageObject.Filter.MainFilterTask;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,16 +13,16 @@ public class CreateTaskTest extends CoreTestCase {
 
     @Test
     public void testCreateTask() throws InterruptedException {
-        LoginPageObject LoginPageObject = new LoginPageObject(driver);
-        LoginPageObject.loginMethod();
+        Login Login = new Login(driver);
+        Login.loginMethod();
 
-        CreateTaskPageObject CreateTaskPageObject = new CreateTaskPageObject(driver);
-        CreateTaskPageObject.createTaskMethod();
+        CreateTask CreateTask = new CreateTask(driver);
+        CreateTask.createTaskMethod();
 
-        AdditionalFilterTaskPageObject AdditionalFilterTaskPageObject = new AdditionalFilterTaskPageObject(driver);
-        AdditionalFilterTaskPageObject.changeAdditionalFilterCondition();
+        AdditionalFilter AdditionalFilter = new AdditionalFilter(driver);
+        AdditionalFilter.changeAdditionalFilterCondition();
 
-        MainFilterTaskPageObject MainFilterTaskPageObject = new MainFilterTaskPageObject(driver);
-        MainFilterTaskPageObject.changeFilterCondition();
+        MainFilterTask MainFilterTask = new MainFilterTask(driver);
+        MainFilterTask.changeFilterCondition();
     }
 }

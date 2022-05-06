@@ -1,22 +1,22 @@
 package tests.Epic;
 
 import lib.CoreTestCase;
-import lib.ui.Epic.CreateEpicPageObject;
-import lib.ui.Login.LoginPageObject;
-import lib.ui.Task.Filter.epic.MainFilterEpicPageObject;
+import lib.ui.EpicPageObject.CreateEpic;
+import lib.ui.LoginPageObject.Login;
+import lib.ui.EpicPageObject.Filter.MainFilterEpic;
 import org.junit.Test;
 
 public class CreateEpicTest extends CoreTestCase {
 
     @Test
     public void testCreateEpic() throws InterruptedException{
-        LoginPageObject LoginPageObject = new LoginPageObject(driver);
-        LoginPageObject.loginMethod();
+        Login Login = new Login(driver);
+        Login.loginMethod();
 
-        CreateEpicPageObject CreateEpicPageObject = new CreateEpicPageObject(driver);
-        CreateEpicPageObject.createEpicMethod();
+        CreateEpic CreateEpic = new CreateEpic(driver);
+        CreateEpic.createEpicMethod();
 
-        MainFilterEpicPageObject MainFilterEpicPageObject = new MainFilterEpicPageObject(driver);
-        MainFilterEpicPageObject.changeFilterCondition();
+        MainFilterEpic MainFilterEpic = new MainFilterEpic(driver);
+        MainFilterEpic.changeFilterCondition();
     }
 }

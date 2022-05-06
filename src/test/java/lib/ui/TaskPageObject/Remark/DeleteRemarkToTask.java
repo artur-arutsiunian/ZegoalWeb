@@ -1,10 +1,10 @@
-package lib.ui.Task.Remark;
+package lib.ui.TaskPageObject.Remark;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class DeleteRemarkTaskPageObject extends MainPageObject {
+public class DeleteRemarkToTask extends MainPageObject {
 
     private final static String
     CHOOSE_TASK = "(//span[@class='status-cell_link-cell__w93Tz'])[2]",
@@ -13,7 +13,7 @@ public class DeleteRemarkTaskPageObject extends MainPageObject {
     CONFIRM_DELETE = "(//span[text()='Yes'])[3]",
     CONFIRM_ABSENCE_OF_REMARK = "(//span[text()='N/A'])[2]";
 
-    public DeleteRemarkTaskPageObject(WebDriver driver)
+    public DeleteRemarkToTask(WebDriver driver)
     {
         super(driver);
     }

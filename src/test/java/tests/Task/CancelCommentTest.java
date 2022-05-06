@@ -1,18 +1,18 @@
 package tests.Task;
 
 import lib.CoreTestCase;
-import lib.ui.Login.LoginPageObject;
-import lib.ui.Task.Comment.CancelCommentToTaskPageObject;
+import lib.ui.LoginPageObject.Login;
+import lib.ui.TaskPageObject.Comment.CancelCommentToTask;
 import org.junit.Test;
 
 public class CancelCommentTest extends CoreTestCase {
 
     @Test
     public void testCancelComment() throws InterruptedException {
-        LoginPageObject LoginPageObject = new LoginPageObject(driver);
-        LoginPageObject.loginMethod();
+        Login Login = new Login(driver);
+        Login.loginMethod();
 
-        CancelCommentToTaskPageObject CancelCommentToTaskPageObject = new CancelCommentToTaskPageObject(driver);
-        CancelCommentToTaskPageObject.cancelCommentMethod();
+        CancelCommentToTask CancelCommentToTask = new CancelCommentToTask(driver);
+        CancelCommentToTask.cancelCommentMethod();
     }
 }

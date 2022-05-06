@@ -1,29 +1,27 @@
 package tests.Task;
 
 import lib.CoreTestCase;
-import lib.ui.Login.LoginPageObject;
-import lib.ui.Task.EditTaskPageObject;
-import lib.ui.Task.Filter.AdditionalFilterTaskPageObject;
-import lib.ui.Task.Filter.MainFilterTaskPageObject;
-import org.junit.Assert;
+import lib.ui.LoginPageObject.Login;
+import lib.ui.TaskPageObject.EditTask;
+import lib.ui.TaskPageObject.Filter.AdditionalFilter;
+import lib.ui.TaskPageObject.Filter.MainFilterTask;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 
 public class EditTaskTest extends CoreTestCase {
 
     @Test
     public void testEditTask() throws InterruptedException {
 
-        LoginPageObject LoginPageObject = new LoginPageObject(driver);
-        LoginPageObject.loginMethod();
+        Login Login = new Login(driver);
+        Login.loginMethod();
 
-        AdditionalFilterTaskPageObject AdditionalFilterTaskPageObject = new AdditionalFilterTaskPageObject(driver);
-        AdditionalFilterTaskPageObject.changeAdditionalFilterCondition();
+        AdditionalFilter AdditionalFilter = new AdditionalFilter(driver);
+        AdditionalFilter.changeAdditionalFilterCondition();
 
-        MainFilterTaskPageObject MainFilterTaskPageObject = new MainFilterTaskPageObject(driver);
-        MainFilterTaskPageObject.changeFilterCondition();
+        MainFilterTask MainFilterTask = new MainFilterTask(driver);
+        MainFilterTask.changeFilterCondition();
 
-        EditTaskPageObject EditTaskPageObject = new EditTaskPageObject(driver);
-        EditTaskPageObject.editTaskMethod();
+        EditTask EditTask = new EditTask(driver);
+        EditTask.editTaskMethod();
     }
 }

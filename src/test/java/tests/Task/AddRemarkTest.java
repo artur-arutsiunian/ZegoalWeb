@@ -1,18 +1,18 @@
 package tests.Task;
 
 import lib.CoreTestCase;
-import lib.ui.Login.LoginPageObject;
-import lib.ui.Task.Remark.AddRemarkToTaskPageObject;
+import lib.ui.LoginPageObject.Login;
+import lib.ui.TaskPageObject.Remark.AddRemarkToTask;
 import org.junit.Test;
 
 public class AddRemarkTest extends CoreTestCase {
 
     @Test
     public void testAddRemark() throws InterruptedException {
-        LoginPageObject LoginPageObject = new LoginPageObject(driver);
-        LoginPageObject.loginMethod();
+        Login Login = new Login(driver);
+        Login.loginMethod();
 
-        AddRemarkToTaskPageObject AddRemarkToTaskPageObject = new AddRemarkToTaskPageObject(driver);
-        AddRemarkToTaskPageObject.addRemarkMethod();
+        AddRemarkToTask AddRemarkToTask = new AddRemarkToTask(driver);
+        AddRemarkToTask.addRemarkMethod();
     }
 }

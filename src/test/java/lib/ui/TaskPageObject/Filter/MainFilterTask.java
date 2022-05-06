@@ -1,19 +1,21 @@
-package lib.ui.Task.Filter.epic;
+package lib.ui.TaskPageObject.Filter;
 
 import lib.ui.MainPageObject;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
-public class MainFilterEpicPageObject extends MainPageObject {
+public class MainFilterTask extends MainPageObject {
 
     private final static String
-            CHOOSE_USER_FILTER = "(//span[@class='filter-title_title__2csu7'])[1]",
-            ENTER_NAME_USER = "(//input[@placeholder='Search'])[2]",
-            CHOOSE_NAME_USER = "//div[@class='css-15l7072-option not-selected']",
-            CLICK_ON_ANY_PLACE_ON_THE_PAGE = "(//div[@aria-hidden='true'])[2]",
-            ASSIGNEE_PRESENT_ON_THE_PAGE = "(//div[@title='2907'])[1]";
+    CHOOSE_USER_FILTER = "(//span[@class='filter-title_title__2csu7'])[1]",
+    ENTER_NAME_USER = "(//input[@placeholder='Search'])[2]",
+    CHOOSE_NAME_USER = "//div[@class='css-15l7072-option not-selected']",
+    CLICK_ON_ANY_PLACE_ON_THE_PAGE = "(//div[@aria-hidden='true'])[2]",
+    ASSIGNEE_PRESENT_ON_THE_PAGE = "(//div[@title='2907'])[1]";
 
-    public MainFilterEpicPageObject(WebDriver driver)
+    public MainFilterTask(WebDriver driver)
     {
         super(driver);
     }
@@ -45,10 +47,10 @@ public class MainFilterEpicPageObject extends MainPageObject {
                 5
         );
         Thread.sleep(2000);
-        this.waitForElementPresent(
+        this.assertElementHasText(
                 By.xpath(ASSIGNEE_PRESENT_ON_THE_PAGE),
-                "can't find chosen assignee",
-                5
+                "2907",
+                "can't proof that assignee is chosen"
         );
     }
 }

@@ -1,10 +1,10 @@
-package lib.ui.user;
+package lib.ui.StaffPageObject;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class CreateUserPageObject extends MainPageObject {
+public class CreateUser extends MainPageObject {
 
     private final static String
     SIDE_TAB_STAFF = "//span[text()='Staff']",
@@ -18,7 +18,7 @@ public class CreateUserPageObject extends MainPageObject {
     SAVE_BUTTON = "//span[text()='Save']",
     CONFIRM_USER_NAME_FIELD_IS_PRESENT = "//span[text()='Mari Sur']";
 
-    public CreateUserPageObject(WebDriver driver)
+    public CreateUser(WebDriver driver)
     {
         super(driver);
     }

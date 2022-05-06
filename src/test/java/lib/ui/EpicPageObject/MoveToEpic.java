@@ -1,15 +1,15 @@
-package lib.ui.Task.Filter.epic;
+package lib.ui.EpicPageObject;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class MoveToEpicPageObject extends MainPageObject {
+public class MoveToEpic extends MainPageObject {
 
     private final static String
     MOVE_TO_EPIC = "//a[@class='MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary']";
 
-    public MoveToEpicPageObject(WebDriver driver)
+    public MoveToEpic(WebDriver driver)
     {
         super(driver);
     }

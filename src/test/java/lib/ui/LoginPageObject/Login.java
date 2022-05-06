@@ -1,17 +1,17 @@
-package lib.ui.Login;
+package lib.ui.LoginPageObject;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPageObject extends MainPageObject {
+public class Login extends MainPageObject {
 
     private static final String
     LOGIN = "//input[@name='email']",
     PASSWORD = "//input[@name='password']",
     LOG_IN_BUTTON = "//span[text()='Login']";
 
-    public LoginPageObject(WebDriver driver)
+    public Login(WebDriver driver)
     {
         super(driver);
     }

@@ -1,21 +1,21 @@
-package lib.ui.Task;
+package lib.ui.TaskPageObject;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class EditTaskPageObject extends MainPageObject {
+public class EditTask extends MainPageObject {
 
     private final static String
     CHOOSE_TASK = "(//span[@class='status-cell_link-cell__w93Tz'])[1]",
     CLICK_ON_EDIT_TASK = "(//span[@class='MuiIconButton-label'])[7]",
     CLEAR_ASSIGNEE_FIELD = "(//span[@class='MuiIconButton-label'])[5]",
     CLICK_ON_ASSIGNEE_FIELD = "(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart'])[1]",
-    CHOOSE_ASSIGNEE = "(//span[@class='MuiIconButton-label'])[18]",
+    CHOOSE_ASSIGNEE = "//div[text()='Brad Rouse']",
     SAVE_BUTTON = "//span[text()='Save']",
     ASSIGNEE_WHICH_WAS_CHANGED_PRESENT_ON_THE_PAGE = "//div[text()='Brad Rouse']";
 
-    public EditTaskPageObject(WebDriver driver)
+    public EditTask(WebDriver driver)
     {
         super(driver);
     }

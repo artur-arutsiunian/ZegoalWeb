@@ -1,10 +1,10 @@
-package lib.ui.Maps;
+package lib.ui.MapsPageObject;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class FilterOnMapsPageObject extends MainPageObject {
+public class FilterOnMaps extends MainPageObject {
 
     private final static String
     MOVE_TO_MAP = "//span[text()='Maps']",
@@ -18,7 +18,7 @@ public class FilterOnMapsPageObject extends MainPageObject {
     CLICK_ON_APPLY_BUTTON = "//span[text()='Apply']",
     USER_PRESENT_IN_THE_LIST = "//span[text()='И Ф']";
 
-    public FilterOnMapsPageObject(WebDriver driver)
+    public FilterOnMaps(WebDriver driver)
     {
         super(driver);
     }
@@ -79,10 +79,10 @@ public class FilterOnMapsPageObject extends MainPageObject {
                 5
         );
         Thread.sleep(2000);
-        this.waitForElementPresent(
+        this.assertElementHasText(
                 By.xpath(USER_PRESENT_IN_THE_LIST),
-                "can't find user 'и ф' in the list",
-                5
+                "И Ф",
+                "can't find user 'и ф' in the list"
         );
     }
 }

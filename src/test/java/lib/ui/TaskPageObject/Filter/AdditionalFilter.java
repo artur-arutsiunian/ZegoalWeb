@@ -1,17 +1,17 @@
-package lib.ui.Task.Filter;
+package lib.ui.TaskPageObject.Filter;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class AdditionalFilterTaskPageObject extends MainPageObject {
+public class AdditionalFilter extends MainPageObject {
 
     private final static String
     CUSTOM_BUTTON = "//span[text()='Custom']",
     DUE_TODAY_ELEMENT_OF_LIST = "//span[text()='Due today']",
     DUE_TODAY_CHOSEN_ON_THE_PAGE = "//span[text()='Due today']";
 
-    public AdditionalFilterTaskPageObject(WebDriver driver)
+    public AdditionalFilter(WebDriver driver)
     {
         super(driver);
     }
