@@ -2,15 +2,15 @@ package tests.Task;
 
 import lib.CoreTestCase;
 import lib.ui.LoginPageObject.Login;
-import lib.ui.TaskPageObject.Label.AddLabelToTask;
 import lib.ui.TaskPageObject.Filter.AdditionalFilter;
 import lib.ui.TaskPageObject.Filter.MainFilterTask;
+import lib.ui.TaskPageObject.Label.CreateLabel;
 import org.junit.Test;
 
-public class AddLabelTest extends CoreTestCase {
+public class CreateLabelTest extends CoreTestCase {
 
     @Test
-    public void testAddLabel() throws InterruptedException {
+    public void testCreateLabel() throws InterruptedException {
         Login Login = new Login(driver);
         Login.loginMethod();
 
@@ -20,7 +20,7 @@ public class AddLabelTest extends CoreTestCase {
         MainFilterTask MainFilterTask = new MainFilterTask(driver);
         MainFilterTask.changeFilterCondition();
 
-        AddLabelToTask AddLabelToTask = new AddLabelToTask(driver);
-        AddLabelToTask.addLabelMethod();
+        CreateLabel CreateLabel = new CreateLabel(driver);
+        CreateLabel.createLabelMethod();
     }
 }

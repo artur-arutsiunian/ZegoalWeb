@@ -116,4 +116,15 @@ public class MainPageObject {
         );
         return titleElement;
     }
+
+    public WebElement assertElementHasAttribute(By by, String value, String expected_value, String error_message){
+        WebElement attributeOfElement = waitForElementPresent(by, error_message);
+        String attributeElement = attributeOfElement.getAttribute(value);
+        Assert.assertEquals(
+                error_message,
+                expected_value,
+                attributeElement
+        );
+        return attributeOfElement;
+    }
 }

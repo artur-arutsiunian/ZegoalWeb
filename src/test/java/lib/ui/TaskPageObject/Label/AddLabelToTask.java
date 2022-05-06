@@ -1,4 +1,4 @@
-package lib.ui.TaskPageObject;
+package lib.ui.TaskPageObject.Label;
 
 import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
@@ -34,7 +34,7 @@ public class AddLabelToTask extends MainPageObject {
         Thread.sleep(2000);
         this.waitForElementAndClick(
                 By.xpath(CLICK_ON_LABEL_FIELD),
-                "can't find 'label field",
+                "can't find 'label' field",
                 5
         );
 //                Thread.sleep(2000);
