@@ -45,10 +45,10 @@ public class AddCommentToTask extends MainPageObject {
                 5
         );
         Thread.sleep(5000);
-        this.waitForElementPresent(
+        this.assertElementHasText(
                 By.xpath(COMMENT_IS_PRESENT_ON_THE_PAGE),
-                "can't confirm that comment present on the page",
-                5
+                "i add comment",
+                "can't confirm that comment present on the page"
         );
     }
 }

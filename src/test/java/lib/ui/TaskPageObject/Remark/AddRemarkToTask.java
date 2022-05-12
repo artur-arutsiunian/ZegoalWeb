@@ -52,10 +52,11 @@ public class AddRemarkToTask extends MainPageObject {
                 5
         );
         Thread.sleep(2000);
-        this.waitForElementPresent(
+        this.assertElementHasAttribute(
                 By.xpath(REMARK_EXISTS_ON_THE_PAGE),
-                "can't find remark on the page",
-                5
+                "class",
+                "container_container__2CrLs",
+                "can't find remark on the page"
         );
     }
 }

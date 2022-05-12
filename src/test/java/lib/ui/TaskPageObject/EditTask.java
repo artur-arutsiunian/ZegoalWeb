@@ -57,11 +57,11 @@ public class EditTask extends MainPageObject {
                 "can't click on 'save' button",
                 5
         );
-            Thread.sleep(2000);
-            this.waitForElementPresent(
-                    By.xpath(ASSIGNEE_WHICH_WAS_CHANGED_PRESENT_ON_THE_PAGE),
-                    "can't find assignee which was changed",
-                    5
+        Thread.sleep(2000);
+        this.assertElementHasText(
+                By.xpath(ASSIGNEE_WHICH_WAS_CHANGED_PRESENT_ON_THE_PAGE),
+                "Brad Rouse",
+                "can't find assignee which was changed"
             );
         }
     }

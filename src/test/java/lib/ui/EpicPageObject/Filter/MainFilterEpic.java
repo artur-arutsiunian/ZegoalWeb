@@ -11,7 +11,7 @@ public class MainFilterEpic extends MainPageObject {
             ENTER_NAME_USER = "(//input[@placeholder='Search'])[2]",
             CHOOSE_NAME_USER = "//div[@class='css-15l7072-option not-selected']",
             CLICK_ON_ANY_PLACE_ON_THE_PAGE = "(//div[@aria-hidden='true'])[2]",
-            ASSIGNEE_PRESENT_ON_THE_PAGE = "(//div[@title='2907'])[1]";
+            ASSIGNEE_PRESENT_ON_THE_PAGE = "(//div[@title='andrew andrew'])[1]";
 
     public MainFilterEpic(WebDriver driver)
     {
@@ -28,7 +28,7 @@ public class MainFilterEpic extends MainPageObject {
         Thread.sleep(2000);
         this.waitForElementAndSendKeys(
                 By.xpath(ENTER_NAME_USER),
-                "2907",
+                "andrew andrew",
                 "can't enter user name",
                 5
         );
@@ -47,7 +47,7 @@ public class MainFilterEpic extends MainPageObject {
         Thread.sleep(2000);
         this.assertElementHasText(
                 By.xpath(ASSIGNEE_PRESENT_ON_THE_PAGE),
-                "2907",
+                "andrew andrew",
                 "can't proof that assignee is chosen"
         );
     }

@@ -44,10 +44,10 @@ public class DeleteRemarkToTask extends MainPageObject {
                 5
         );
         Thread.sleep(2000);
-        this.waitForElementPresent(
+        this.assertElementHasText(
                 By.xpath(CONFIRM_ABSENCE_OF_REMARK),
-                "can't confirm that there is no remark has been created",
-                5
+                "N/A",
+                "can't confirm that there is no remark has been created"
         );
     }
 }

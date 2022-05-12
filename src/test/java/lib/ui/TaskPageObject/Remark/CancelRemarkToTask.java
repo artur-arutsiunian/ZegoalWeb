@@ -11,7 +11,8 @@ public class CancelRemarkToTask extends MainPageObject {
     CLICK_ON_CREATE_REMARK = "(//span[@class='MuiIconButton-label'])[6]",
     CANCEL_ADD_REMARK = "(//span[@class='MuiIconButton-label'])[10]",
     BACK_TO_MAIN_PAGE = "(//span[@class='MuiIconButton-label'])[4]",
-    TASK_TAB_IS_SELECTED = "//a[@aria-selected='true']//span[text()='Individual']";
+    TASK_TAB_IS_SELECTED = "//a[@aria-selected='true']",
+    TASK_TAB_HAS_CORRECT_TEXT = "//a[@aria-selected='true']//span[text()='Individual']";
 
     public CancelRemarkToTask(WebDriver driver)
     {
@@ -54,10 +55,17 @@ public class CancelRemarkToTask extends MainPageObject {
         RepeatCyclesForBackToMainPage();
 
         Thread.sleep(5000);
-        this.waitForElementPresent(
+        this.assertElementHasAttribute(
                 By.xpath(TASK_TAB_IS_SELECTED),
-                "can't confirm that task tab is selected",
-                5
+                "aria-selected",
+                "true",
+                "can't confirm that task tab is selected"
+        );
+        Thread.sleep(5000);
+        this.assertElementHasText(
+                By.xpath(TASK_TAB_HAS_CORRECT_TEXT),
+                "Individual",
+                "can't proof that task has correct text"
         );
     }
 }

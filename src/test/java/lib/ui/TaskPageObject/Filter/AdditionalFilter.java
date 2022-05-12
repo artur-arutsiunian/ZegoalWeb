@@ -30,10 +30,10 @@ public class AdditionalFilter extends MainPageObject {
                 5
         );
         Thread.sleep(2000);
-        this.waitForElementPresent(
+        this.assertElementHasText(
                 By.xpath(DUE_TODAY_CHOSEN_ON_THE_PAGE),
-                "can't find 'Due today' on the page",
-                5
+                "Due today",
+                "can't find 'Due today' on the page"
         );
     }
 }

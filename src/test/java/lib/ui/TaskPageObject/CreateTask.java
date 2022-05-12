@@ -13,7 +13,7 @@ public class CreateTask extends MainPageObject {
             CLICK_ON_LOCATION_FIELD = "(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart'])[2]",
             CHOOSE_LOCATION = "(//span[@class='MuiIconButton-label'])[11]",
             CLICK_ON_ASSIGNEE_FIELD = "(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart'])[1]",
-            CHOOSE_ASSIGNEE = "//div[text()=' 2907']",
+            CHOOSE_ASSIGNEE = "//div[text()='andrew andrew']",
             COMPLETE_TASK_CREATION = "//span[@class='button_title__3rgHS']";
 
     public CreateTask(WebDriver driver) {

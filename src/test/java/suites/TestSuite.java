@@ -1,5 +1,6 @@
 package suites;
 
+import lib.ui.TaskPageObject.Label.CreateLabel;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import tests.Epic.CreateEpicTest;
@@ -15,6 +16,7 @@ import tests.Staff.CreateUserTest;
         CreateEpicTest.class,
         DeleteEpicTest.class,
         CreateTaskTest.class,
+        CreateLabelTest.class,
         AddLabelTest.class,
         AddRemarkTest.class,
         CancelRemarkTest.class,

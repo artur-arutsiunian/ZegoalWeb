@@ -1,10 +1,8 @@
 package lib.ui.EpicPageObject;
 
 import lib.ui.MainPageObject;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class DeleteEpic extends MainPageObject {
 
@@ -12,7 +10,8 @@ public class DeleteEpic extends MainPageObject {
     CLICK_ON_EPIC = "(//span[@class='status-cell_link-cell__ihudg'])[1]",
     DELETE_EPIC = "(//span[@class='MuiIconButton-label'])[5]",
     CONFIRM_DELETE = "(//span[text()='Yes'])[2]",
-    EPIC_TAB_IS_SELECTED = "//a[@aria-selected='true']//span[text()='Epics']";
+    EPIC_TAB_IS_SELECTED = "//a[@aria-selected='true']",
+    EPIC_TAB_HAS_CORRECT_TEXT = "//a[@aria-selected='true']//span[text()='Epics']";
 
     public DeleteEpic(WebDriver driver)
     {
@@ -39,10 +38,17 @@ public class DeleteEpic extends MainPageObject {
                 5
         );
         Thread.sleep(2000);
-        this.assertElementHasText(
+        this.assertElementHasAttribute(
                 By.xpath(EPIC_TAB_IS_SELECTED),
-                "Epics",
+                "aria-selected",
+                "true",
                 "can't proof that epic is selected"
+        );
+        Thread.sleep(2000);
+        this.assertElementHasText(
+                By.xpath(EPIC_TAB_HAS_CORRECT_TEXT),
+                "Epics",
+                "can't proof that epic has correct text"
         );
     }
 }

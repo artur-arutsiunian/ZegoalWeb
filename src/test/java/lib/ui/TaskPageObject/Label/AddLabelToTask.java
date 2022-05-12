@@ -50,10 +50,10 @@ public class AddLabelToTask extends MainPageObject {
                 5
         );
         Thread.sleep(2000);
-        this.waitForElementPresent(
+        this.assertElementHasText(
                 By.xpath(LABEL_PRESENT_ON_THE_PAGE),
-                "can't confirm that label present on the page",
-                5
+                "Фиолетовая метка",
+                "can't confirm that label present on the page"
         );
     }
 }

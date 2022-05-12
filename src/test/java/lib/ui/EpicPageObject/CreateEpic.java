@@ -11,7 +11,7 @@ public class CreateEpic extends MainPageObject {
     CREATE_BUTTON = "//button[@class='add-button_addButton__1w3Jt button_green__zFAs3 button_zgButton__19tY7']",
     ENTER_EPIC_NAME = "(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart'])[1]",
     CLICK_ON_ASSIGNEE_FIELD = "(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart'])[2]",
-    CHOOSE_ASSIGNEE = "//div[text()=' 2907']",
+    CHOOSE_ASSIGNEE = "//div[text()='andrew andrew']",
     COMPLETE_EPIC_CREATION = "//span[@class='button_title__3rgHS']",
     EPIC_HAS_BEEN_CREATED = "//span[text()='Epic for auto test']",
     CLOSE_BUTTON = "(//span[@class='MuiIconButton-label'])[4]",
