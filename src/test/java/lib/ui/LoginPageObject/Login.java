@@ -9,7 +9,8 @@ public class Login extends MainPageObject {
     private static final String
     LOGIN = "//input[@name='email']",
     PASSWORD = "//input[@name='password']",
-    LOG_IN_BUTTON = "//span[text()='Login']";
+    LOG_IN_BUTTON = "//span[text()='Login']",
+    MAIN_PAGE_IS_OPEN = "//div[text()='Tasks']";
 
     public Login(WebDriver driver)
     {
@@ -36,6 +37,12 @@ public class Login extends MainPageObject {
                 By.xpath(LOG_IN_BUTTON),
                 "Can't find 'Log in button'",
                 5
+        );
+        Thread.sleep(2000);
+        this.assertElementHasText(
+                By.xpath(MAIN_PAGE_IS_OPEN),
+                "Tasks",
+                "can't confirm that main page is open"
         );
     }
 }

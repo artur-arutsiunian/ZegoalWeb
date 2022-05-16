@@ -16,7 +16,7 @@ public class CreateUser extends MainPageObject {
     SELECT_ROLES = "(//span[@class='MuiIconButton-label'])[5]",
     SELECT_ADMIN_ROLE = "//div[text()='admin']",
     SAVE_BUTTON = "//span[text()='Save']",
-    CONFIRM_USER_NAME_FIELD_IS_PRESENT = "(//span[text()='Mari Sur'])[2]";
+    CONFIRM_USER_EMAIL_FIELD_IS_PRESENT = "//input[@value='mari@mail.com']";
 
     public CreateUser(WebDriver driver)
     {
@@ -82,10 +82,11 @@ public class CreateUser extends MainPageObject {
                 5
         );
         Thread.sleep(2000);
-        this.assertElementHasText(
-                By.xpath(CONFIRM_USER_NAME_FIELD_IS_PRESENT),
-                "Mari Sur",
-                "can't confirm user name field is present"
+        this.assertElementHasAttribute(
+                By.xpath(CONFIRM_USER_EMAIL_FIELD_IS_PRESENT),
+                "value",
+                "mari@mail.com",
+                "can't confirm that email of user present on the page"
         );
     }
 }

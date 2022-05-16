@@ -7,8 +7,6 @@ import lib.ui.TaskPageObject.Filter.AdditionalFilter;
 import lib.ui.TaskPageObject.Filter.MainFilterTask;
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class CreateTaskTest extends CoreTestCase {
 
     @Test

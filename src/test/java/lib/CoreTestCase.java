@@ -1,5 +1,6 @@
 package lib;
 
+import io.qameta.allure.Step;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +15,7 @@ public class CoreTestCase {
     protected WebDriver driver;
     protected ChromeOptions options;
     @Before
+    @Step("Run driver and session")
     public void SetUp(){
        System.setProperty("webdriver.chrome.driver","/Users/arturarutsiunian/Documents/ZegoalWeb/src/main/resources/chromedriver");
 
@@ -28,6 +30,7 @@ public class CoreTestCase {
     }
 
     @After
+    @Step("Remove driver and session")
     public void Close(){
         driver.close();
     }}
