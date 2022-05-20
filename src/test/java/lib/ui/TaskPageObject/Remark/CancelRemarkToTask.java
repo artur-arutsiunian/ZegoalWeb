@@ -19,13 +19,6 @@ public class CancelRemarkToTask extends MainPageObject {
         super(driver);
     }
 
-    public void RepeatCyclesForBackToMainPage() throws InterruptedException {
-        int number_of_tapping_numbers=0;
-        while(number_of_tapping_numbers<1){
-            this.waitForElementAndClick(By.xpath(BACK_TO_MAIN_PAGE),"Cannot back to main page",5);
-            ++number_of_tapping_numbers;}
-    }
-
     public void cancelRemarkMethod() throws InterruptedException {
         Thread.sleep(5000);
         this.waitForElementAndClick(
@@ -51,9 +44,6 @@ public class CancelRemarkToTask extends MainPageObject {
                 "can't click on 'x' second time",
                 5
         );
-        Thread.sleep(3000);
-        RepeatCyclesForBackToMainPage();
-
         Thread.sleep(5000);
         this.assertElementHasAttribute(
                 By.xpath(TASK_TAB_IS_SELECTED),

@@ -7,8 +7,9 @@ import tests.Epic.CreateEpicTest;
 import tests.Epic.DeleteEpicTest;
 import tests.Maps.ChooseUserTest;
 import tests.Maps.FilterOnMapTest;
+import tests.Maps.ViewTaskTest;
+import tests.Staff.*;
 import tests.Task.*;
-import tests.Staff.CreateUserTest;
 
 @RunWith(Suite.class)
 
@@ -28,7 +29,12 @@ import tests.Staff.CreateUserTest;
         FilterTest.class,
         ChooseUserTest.class,
         FilterOnMapTest.class,
-        CreateUserTest.class
+        ViewTaskTest.class,
+        CreateUserTest.class,
+        DeactivateUserTest.class,
+        ActivateUserTest.class,
+        EditUserTest.class,
+        SearchUserTest.class
 })
 
 public class TestSuite {}

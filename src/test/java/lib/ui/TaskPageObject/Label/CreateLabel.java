@@ -58,7 +58,7 @@ public class CreateLabel extends MainPageObject {
                 5
         );
         Thread.sleep(2000);
-        this.waitForElementsPresentSize(
+        this.waitForElementsPresent(
                 By.xpath(GET_LIST_OF_COLORS),
                 "can't receive list of colors",
                 5

@@ -14,8 +14,7 @@ public class MoveToMapsAndChooseUser extends MainPageObject {
     CONFIRM_USER_NAME = "//div[text()='Имя Фамилия']",
     CLOSE_SIDE_BAR = "(//span[@class='MuiIconButton-label'])[6]",
     DELETE_USER_NAME_FROM_SEARCH_FIELD = "(//span[@class='MuiIconButton-label'])[5]",
-    LIST_OF_USERS_IS_PRESENT = "//div[@class='scrollable-list_container__2NtNz']/div/div",
-    USER_NAME_FIELD_IS_EMPTY = "//input[@placeholder='Search']";
+    LIST_OF_USERS_IS_PRESENT = "//div[@class='scrollable-list_container__2NtNz']/div/div";
 
     public MoveToMapsAndChooseUser(WebDriver driver)
     {
@@ -61,7 +60,7 @@ public class MoveToMapsAndChooseUser extends MainPageObject {
                 5
         );
         Thread.sleep(2000);
-        this.waitForElementsPresentSize(
+        this.waitForElementsPresent(
                 By.xpath(LIST_OF_USERS_IS_PRESENT),
                 "can't find list of users",
                 5
@@ -70,13 +69,6 @@ public class MoveToMapsAndChooseUser extends MainPageObject {
         int amount_of_elements = getAmountOfElements(
                 By.xpath(LIST_OF_USERS_IS_PRESENT)
         );
-        Assert.assertEquals("Found too many users", 30, amount_of_elements);
-
-//        Thread.sleep(2000);
-//        this.waitForElementPresent(
-//                By.xpath(USER_NAME_FIELD_IS_EMPTY),
-//                "can't receive determined element",
-//                5
-//        );
+        Assert.assertEquals("Incorrect number of users", 30, amount_of_elements);
     }
 }

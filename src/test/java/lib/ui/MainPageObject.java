@@ -105,12 +105,6 @@ public class MainPageObject {
         return elements.size();
     }
 
-    public List<WebElement> waitForElementsPresentSize(By by, String error_message, long timeoutInSeconds) {
-        List<WebElement> elements = waitForElementsPresent(by, error_message, 5);
-        elements.size();
-        return elements;
-    }
-
     public WebElement assertElementHasText(By by, String expected_text, String error_message){
         WebElement titleElement = waitForElementPresent(by, error_message);
         String article_title = titleElement.getText();
