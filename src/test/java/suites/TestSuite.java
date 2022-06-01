@@ -38,6 +38,7 @@ import tests.Task.*;
         SummaryVisitsReportTest.class,
         SummaryTimesheetReportTest.class,
         PeriodTimesheetReportTest.class,
+        EventsTimesheetReportTest.class,
         CreateUserTest.class,
         DeactivateUserTest.class,
         ActivateUserTest.class,
