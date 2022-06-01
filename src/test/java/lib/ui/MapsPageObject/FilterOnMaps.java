@@ -10,7 +10,7 @@ public class FilterOnMaps extends MainPageObject {
     MOVE_TO_MAP = "//span[text()='Maps']",
     CLICK_ON_FILTER_BUTTON = "(//span[@class='MuiIconButton-label'])[4]",
     CLICK_ON_GROUPS = "(//span[@class='MuiIconButton-label'])[7]",
-    CHOOSE_GROUP = "(//span[@class='MuiIconButton-label'])[9]",
+    CHOOSE_GROUP = "//div[text()='check1']",
     CONFIRM_CHOICE = "(//span[@class='MuiIconButton-label'])[7]",
     CLICK_ON_TIME_OF_COORDINATES_RECEIPT = "(//span[@class='MuiIconButton-label'])[8]",
     CHOOSE_TIME = "(//span[@class='MuiIconButton-label'])[11]",
