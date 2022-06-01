@@ -18,7 +18,7 @@ public class CreateLabel extends MainPageObject {
     CLICK_ON_CREATE_BUTTON = "//span[text()='Create']",
     CLICK_ON_LABEL_FIELD_SECOND_TIME = "(//div[text()='N/A'])[1]",
     LABEL_COLOR_IS_PINK = "//li[@data-color='#ff375f']",
-    LABEL_NAME_IS_AUTO = "//li[@data-color='#ff375f'][text()='pink color']";
+    LABEL_NAME_IS_PINK_COLOR = "//li[@data-color='#ff375f'][text()='pink color']";
 
     public CreateLabel(WebDriver driver)
     {
@@ -96,7 +96,7 @@ public class CreateLabel extends MainPageObject {
         );
         Thread.sleep(2000);
         this.assertElementHasText(
-                By.xpath(LABEL_NAME_IS_AUTO),
+                By.xpath(LABEL_NAME_IS_PINK_COLOR),
                 "pink color",
                 "can't confirm that label name is correct"
         );

@@ -8,8 +8,6 @@ public class CreateTask extends MainPageObject {
 
     private final static String
             CREATE_BUTTON = "//button[@class='add-button_addButton__1w3Jt button_green__zFAs3 button_zgButton__19tY7']",
-            CLICK_ON_FORM_FIELD = "(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart'])[1]",
-            CHOOSE_FORM = "(//span[@class='MuiIconButton-label'])[10]",
             CLICK_ON_LOCATION_FIELD = "(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart'])[2]",
             CHOOSE_LOCATION = "(//span[@class='MuiIconButton-label'])[11]",
             CLICK_ON_ASSIGNEE_FIELD = "(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart'])[1]",
@@ -25,18 +23,6 @@ public class CreateTask extends MainPageObject {
         this.waitForElementAndClick(
                 By.xpath(CREATE_BUTTON),
                 "Can't find 'Create' button",
-                5
-        );
-        Thread.sleep(2000);
-        this.waitForElementAndClick(
-                By.xpath(CLICK_ON_FORM_FIELD),
-                "can't find 'Form' field",
-                5
-        );
-        Thread.sleep(2000);
-        this.waitForElementAndClick(
-                By.xpath(CHOOSE_FORM),
-                "can't choose form",
                 5
         );
         Thread.sleep(2000);
