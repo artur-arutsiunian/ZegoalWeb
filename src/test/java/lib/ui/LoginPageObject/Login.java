@@ -38,7 +38,7 @@ public class Login extends MainPageObject {
                 "Can't find 'Log in button'",
                 5
         );
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         this.assertElementHasText(
                 By.xpath(MAIN_PAGE_IS_OPEN),
                 "Tasks",
