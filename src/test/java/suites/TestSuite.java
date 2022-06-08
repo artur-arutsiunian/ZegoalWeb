@@ -2,6 +2,7 @@ package suites;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
+import tests.CRM.companies.CreateCompanyTest;
 import tests.Epic.CreateEpicTest;
 import tests.Epic.DeleteEpicTest;
 import tests.Maps.ChooseUserTest;
@@ -40,6 +41,8 @@ import tests.Task.*;
         PeriodTimesheetReportTest.class,
         EventsTimesheetReportTest.class,
         MobileClientEventsReportTest.class,
+        CustomReportTest.class,
+        CreateCompanyTest.class,
         CreateUserTest.class,
         DeactivateUserTest.class,
         ActivateUserTest.class,
