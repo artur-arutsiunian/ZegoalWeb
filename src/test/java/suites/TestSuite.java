@@ -2,7 +2,8 @@ package suites;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-import tests.CRM.companies.CreateCompanyTest;
+import tests.CRM.companies.*;
+import tests.CRM.locations.CreateLocationTest;
 import tests.Epic.CreateEpicTest;
 import tests.Epic.DeleteEpicTest;
 import tests.Maps.ChooseUserTest;
@@ -43,6 +44,11 @@ import tests.Task.*;
         MobileClientEventsReportTest.class,
         CustomReportTest.class,
         CreateCompanyTest.class,
+        DeleteCompanyTest.class,
+        EditCompanyTest.class,
+        MoveToInfoTabTest.class,
+        AddCommentToCompanyTest.class,
+        CreateLocationTest.class,
         CreateUserTest.class,
         DeactivateUserTest.class,
         ActivateUserTest.class,
