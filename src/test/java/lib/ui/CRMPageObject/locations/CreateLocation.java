@@ -105,7 +105,7 @@ public class CreateLocation extends MainPageObject {
                 "can't click on 'company' field",
                 5
         );
-        Thread.sleep(10000);
+        Thread.sleep(15000);
         this.waitForElementsAndClick(
                 By.xpath(CLICK_ON_FIRST_COMPANY_IN_THE_LIST),
                 "can't click on first company in the list",

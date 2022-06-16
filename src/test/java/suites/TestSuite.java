@@ -4,6 +4,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import tests.CRM.companies.*;
 import tests.CRM.locations.CreateLocationTest;
+import tests.CRM.locations.DeleteLocationTest;
 import tests.Epic.CreateEpicTest;
 import tests.Epic.DeleteEpicTest;
 import tests.Maps.ChooseUserTest;
@@ -49,6 +50,7 @@ import tests.Task.*;
         MoveToInfoTabTest.class,
         AddCommentToCompanyTest.class,
         CreateLocationTest.class,
+        DeleteLocationTest.class,
         CreateUserTest.class,
         DeactivateUserTest.class,
         ActivateUserTest.class,
