@@ -1,4 +1,4 @@
-package lib.ui.CRMPageObject.companies;
+package lib.ui.CRMPageObject.locations;
 
 import lib.ui.MainPageObject;
 import org.junit.Assert;
@@ -8,17 +8,18 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class EditCompany extends MainPageObject {
+public class EditLocation extends MainPageObject {
 
     private final static String
     MOVE_TO_CRM = "//span[text()='CRM']",
-    LIST_OF_COMPANIES_IS_PRESENT = "//div[@class='scrollable-list_container__2NtNz']/div/div",
-    CLICK_ON_FIRST_COMPANY_IN_THE_LIST = "//div[@class='scrollable-list_container__2NtNz']/div/div",
+    CLICK_ON_LOCATIONS_TAB = "//span[text()='Locations']",
+    LIST_OF_LOCATIONS_IS_PRESENT = "//div[@class='scrollable-list_container__2NtNz']/div/div",
+    CLICK_ON_FIRST_LOCATION_IN_THE_LIST = "//div[@class='scrollable-list_container__2NtNz']/div/div",
     CLICK_ON_EDIT_BUTTON = "(//span[@class='MuiIconButton-label'])[8]",
-    CLEAR_EMAIL_FIELD = "//input[@placeholder='Email']",
-    INPUT_EMAIL = "//input[@placeholder='Email']",
+    CLEAR_NAME_FIELD = "//textarea[@placeholder='Name']",
+    INPUT_NAME = "//textarea[@placeholder='Name']",
     CLICK_ON_SAVE_BUTTON = "//span[text()='Save']",
-    COMPANY_EMAIL_IS_CHANGED = "//input[@value='new@mail.com']";
+    LOCATION_NAME_IS_CHANGED = "//input[@value='CAT']";
 
     public List<WebElement> waitForElementsAndClick(By by, String error_message, long timeoutInSeconds) {
         List<WebElement> elements = this.waitForElementsPresent(by, error_message, 5);
@@ -26,12 +27,12 @@ public class EditCompany extends MainPageObject {
         return elements;
     }
 
-    public EditCompany(WebDriver driver)
+    public EditLocation(WebDriver driver)
     {
         super(driver);
     }
 
-    public void editCompanyMethod() throws InterruptedException {
+    public void editLocationMethod() throws InterruptedException {
         Thread.sleep(2000);
         this.waitForElementAndClick(
                 By.xpath(MOVE_TO_CRM),
@@ -39,21 +40,27 @@ public class EditCompany extends MainPageObject {
                 5
         );
         Thread.sleep(2000);
+        this.waitForElementAndClick(
+                By.xpath(CLICK_ON_LOCATIONS_TAB),
+                "can't click on 'locations' tab",
+                5
+        );
+        Thread.sleep(2000);
         this.waitForElementsPresent(
-                By.xpath(LIST_OF_COMPANIES_IS_PRESENT),
-                "can't find list of companies",
+                By.xpath(LIST_OF_LOCATIONS_IS_PRESENT),
+                "can't find list of locations",
                 5
         );
 
         int amount_of_elements = getAmountOfElements(
-                By.xpath(LIST_OF_COMPANIES_IS_PRESENT)
+                By.xpath(LIST_OF_LOCATIONS_IS_PRESENT)
         );
-        Assert.assertEquals("Incorrect number of companies", 31, amount_of_elements);
+        Assert.assertEquals("Incorrect number of locations", 31, amount_of_elements);
 
         Thread.sleep(2000);
         this.waitForElementsAndClick(
-                By.xpath(CLICK_ON_FIRST_COMPANY_IN_THE_LIST),
-                "can't click on first company in the list",
+                By.xpath(CLICK_ON_FIRST_LOCATION_IN_THE_LIST),
+                "can't click on first location in the list",
                 5
         );
         Thread.sleep(2000);
@@ -64,15 +71,15 @@ public class EditCompany extends MainPageObject {
         );
         Thread.sleep(2000);
         this.waitForElementAndClear(
-                By.xpath(CLEAR_EMAIL_FIELD),
-                "can't clear 'email' field",
+                By.xpath(CLEAR_NAME_FIELD),
+                "can't clear 'name' field",
                 5
         );
         Thread.sleep(2000);
         this.waitForElementAndSendKeys(
-                By.xpath(INPUT_EMAIL),
-                "new@mail.com",
-                "can't input company email",
+                By.xpath(INPUT_NAME),
+                "CAT",
+                "can't input location name",
                 5
         );
         Thread.sleep(2000);
@@ -83,10 +90,10 @@ public class EditCompany extends MainPageObject {
         );
         Thread.sleep(2000);
         this.assertElementHasAttribute(
-                By.xpath(COMPANY_EMAIL_IS_CHANGED),
+                By.xpath(LOCATION_NAME_IS_CHANGED),
                 "value",
-                "new@mail.com",
-                "can't confirm that company name is changed"
+                "CAT",
+                "can't confirm that location name is changed"
         );
     }
 }
