@@ -2,11 +2,9 @@ package suites;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
+import tests.CRM.asset.CreateAssetTest;
 import tests.CRM.companies.*;
-import tests.CRM.locations.AddCommentToLocationTest;
-import tests.CRM.locations.CreateLocationTest;
-import tests.CRM.locations.DeleteLocationTest;
-import tests.CRM.locations.EditLocationTest;
+import tests.CRM.locations.*;
 import tests.Epic.CreateEpicTest;
 import tests.Epic.DeleteEpicTest;
 import tests.Maps.ChooseUserTest;
@@ -55,6 +53,8 @@ import tests.Task.*;
         DeleteLocationTest.class,
         EditLocationTest.class,
         AddCommentToLocationTest.class,
+        MoveToInfoTabInLocationTest.class,
+        CreateAssetTest.class,
         CreateUserTest.class,
         DeactivateUserTest.class,
         ActivateUserTest.class,
