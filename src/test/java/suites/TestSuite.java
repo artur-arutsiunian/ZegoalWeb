@@ -3,6 +3,8 @@ package suites;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import tests.CRM.asset.CreateAssetTest;
+import tests.CRM.asset.DeleteAssetTest;
+import tests.CRM.asset.EditAssetTest;
 import tests.CRM.companies.*;
 import tests.CRM.locations.*;
 import tests.Epic.CreateEpicTest;
@@ -55,6 +57,8 @@ import tests.Task.*;
         AddCommentToLocationTest.class,
         MoveToInfoTabInLocationTest.class,
         CreateAssetTest.class,
+        EditAssetTest.class,
+        DeleteAssetTest.class,
         CreateUserTest.class,
         DeactivateUserTest.class,
         ActivateUserTest.class,
