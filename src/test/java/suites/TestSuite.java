@@ -2,6 +2,7 @@ package suites;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
+import tests.CRM.asset.AddCommentToAssetTest;
 import tests.CRM.asset.CreateAssetTest;
 import tests.CRM.asset.DeleteAssetTest;
 import tests.CRM.asset.EditAssetTest;
@@ -59,6 +60,7 @@ import tests.Task.*;
         CreateAssetTest.class,
         EditAssetTest.class,
         DeleteAssetTest.class,
+        AddCommentToAssetTest.class,
         CreateUserTest.class,
         DeactivateUserTest.class,
         ActivateUserTest.class,
