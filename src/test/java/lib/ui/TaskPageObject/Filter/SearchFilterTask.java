@@ -8,9 +8,9 @@ public class SearchFilterTask extends MainPageObject {
 
     private final static String
     SEARCH_FIELD = "//input[@placeholder='Search']",
-    TASK_PRESENT_ON_THE_PAGE = "//span[text()='100']",
+    TASK_PRESENT_ON_THE_PAGE = "//span[text()='300']",
     DELETE_DATA_FROM_THE_FIELD = "(//span[@class='MuiIconButton-label'])[5]",
-    TASK_IS_NOT_PRESENT_ON_THE_PAGE = "//span[text()='100']";
+    TASK_IS_NOT_PRESENT_ON_THE_PAGE = "//span[text()='300']";
 
     public SearchFilterTask(WebDriver driver)
     {
@@ -21,7 +21,7 @@ public class SearchFilterTask extends MainPageObject {
         Thread.sleep(2000);
         this.waitForElementAndSendKeys(
                 By.xpath(SEARCH_FIELD),
-                "100",
+                "300",
                 "can't enter data in search field",
                 5
         );
