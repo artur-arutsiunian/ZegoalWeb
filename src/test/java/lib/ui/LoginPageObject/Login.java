@@ -21,7 +21,7 @@ public class Login extends MainPageObject {
         Thread.sleep(2000);
         this.waitForElementAndSendKeys(
                 By.xpath(LOGIN),
-                "newemail@mail.ru",
+                "test11test@mail.com",
                 "Can't find 'Login' field",
                 5
         );

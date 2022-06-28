@@ -21,7 +21,7 @@ public class SummaryMovementsReport extends MainPageObject {
     COMPLETE_REPORT_CREATION = "(//button[@class='MuiButtonBase-root MuiIconButton-root'])[9]",
     CLICK_ON_APPLY_BUTTON = "//span[text()='Apply']",
     LIST_OF_COLUMNS_IS_PRESENT = "//th[@class='MuiTableCell-root MuiTableCell-head header_head__t2hQM']",
-    USER_IS_PRESENT = "(//span[text()='andrew andrew'])[2]";
+    USER_IS_PRESENT = "//span[text()='andrew andrew']";
 
     public SummaryMovementsReport(WebDriver driver)
     {

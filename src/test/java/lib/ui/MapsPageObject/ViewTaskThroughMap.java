@@ -9,7 +9,7 @@ public class ViewTaskThroughMap extends MainPageObject {
 
     private final static String
     MOVE_TO_MAP = "//span[text()='Maps']",
-    CHOOSE_USER = "(//span[text()='andrew andrew'])[2]",
+    CHOOSE_USER = "//span[text()='andrew andrew']",
     CLICK_ON_VIEW_TASK = "//span[text()='View tasks']",
     ASSIGNEE_PRESENT_ON_THE_PAGE = "(//div[@title='andrew andrew'])[2]";
 

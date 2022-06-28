@@ -13,13 +13,14 @@ import tests.Epic.DeleteEpicTest;
 import tests.Maps.ChooseUserTest;
 import tests.Maps.FilterOnMapTest;
 import tests.Maps.ViewTaskTest;
+import tests.Planning.timeline.DragAndDropTest;
 import tests.Reports.*;
 import tests.Staff.*;
 import tests.Task.*;
 
 @RunWith(Suite.class)
 
-@Suite.SuiteClasses({
+@Suite.SuiteClasses(value = {
         CreateEpicTest.class,
         DeleteEpicTest.class,
         CreateTaskTest.class,
@@ -65,7 +66,8 @@ import tests.Task.*;
         DeactivateUserTest.class,
         ActivateUserTest.class,
         EditUserTest.class,
-        SearchUserTest.class
+        SearchUserTest.class,
+        DragAndDropTest.class
 })
 
 public class TestSuite {}

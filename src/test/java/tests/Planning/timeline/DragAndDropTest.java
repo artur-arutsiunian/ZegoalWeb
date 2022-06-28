@@ -1,8 +1,8 @@
 package tests.Planning.timeline;
 
 import lib.CoreTestCase;
-import lib.ui.PlanningPageObject.timeline.DragAndDropTaskToTable;
 import lib.ui.LoginPageObject.Login;
+import lib.ui.Planning.timeline.DragAndDropTaskToTable;
 import org.junit.Test;
 
 public class DragAndDropTest extends CoreTestCase {
