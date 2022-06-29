@@ -2,10 +2,7 @@ package suites;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-import tests.CRM.asset.AddCommentToAssetTest;
-import tests.CRM.asset.CreateAssetTest;
-import tests.CRM.asset.DeleteAssetTest;
-import tests.CRM.asset.EditAssetTest;
+import tests.CRM.asset.*;
 import tests.CRM.companies.*;
 import tests.CRM.locations.*;
 import tests.Epic.CreateEpicTest;
@@ -62,6 +59,7 @@ import tests.Task.*;
         EditAssetTest.class,
         DeleteAssetTest.class,
         AddCommentToAssetTest.class,
+        MoveToInfoTabInAssetTest.class,
         CreateUserTest.class,
         DeactivateUserTest.class,
         ActivateUserTest.class,
