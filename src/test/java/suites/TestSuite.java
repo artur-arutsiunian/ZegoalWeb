@@ -4,9 +4,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import tests.CRM.asset.*;
 import tests.CRM.companies.*;
-import tests.CRM.contacts.CreateContactTest;
-import tests.CRM.contacts.DeleteContactTest;
-import tests.CRM.contacts.EditContactTest;
+import tests.CRM.contacts.*;
 import tests.CRM.locations.*;
 import tests.Epic.CreateEpicTest;
 import tests.Epic.DeleteEpicTest;
@@ -66,6 +64,8 @@ import tests.Task.*;
         CreateContactTest.class,
         EditContactTest.class,
         DeleteContactTest.class,
+        AddCommentToContactTest.class,
+        MoveToInfoTabInContactTest.class,
         CreateUserTest.class,
         DeactivateUserTest.class,
         ActivateUserTest.class,
